@@ -657,6 +657,8 @@ body {
   }
 }
 .rate__card {
+  display: flex;
+  flex-direction: column;
   padding: 20px 20px 40px;
   border-radius: 10px;
   background: #FFF;
@@ -669,17 +671,23 @@ body {
 }
 .rate__card-price {
   text-align: center;
-  margin-bottom: 60px;
   font-size: 36px;
   color: #2F2F2F;
 }
+.rate__card-subprice {
+  color: #2F2F2F;
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 60px;
+}
 @media (max-width: 768px) {
-  .rate__card-price {
+  .rate__card-subprice {
     margin-bottom: 30px;
   }
 }
 .rate__card-sublist {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  flex: 1 1 auto;
 }
 .rate__card-text {
   display: flex;
@@ -718,7 +726,8 @@ body {
 
 .rate__card:hover .rate__card-text,
 .rate__card:hover .rate__card-price,
-.rate__card:hover .rate__card-name {
+.rate__card:hover .rate__card-name,
+.rate__card:hover .rate__card-subprice {
   color: #fff;
   transition: all 0.3s ease;
 }
