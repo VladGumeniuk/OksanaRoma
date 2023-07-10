@@ -732,6 +732,72 @@ body {
   transition: all 0.3s ease;
 }
 
+.circle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  align-items: center;
+}
+.circle__bg {
+  position: relative;
+}
+.circle__bg-icon {
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .circle__bg-icon {
+    max-width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .circle__image {
+    width: 150px;
+  }
+}
+.circle__position-top {
+  margin-top: 150px;
+}
+@media (max-width: 768px) {
+  .circle__position-top {
+    margin-top: 50px;
+  }
+}
+.circle__position-bottom {
+  margin-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .circle__position-bottom {
+    margin-bottom: 50px;
+  }
+}
+.circle__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2F2F2F;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 1200px) {
+  .circle__text {
+    font-size: calc(10px + 8 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 768px) {
+  .circle__text img {
+    width: 15px;
+  }
+}
+.circle__content {
+  max-width: 217px;
+}
+
 .myGallery .swiper-wrapper {
   margin-top: 55px;
   transition-timing-function: linear !important;
