@@ -38,6 +38,9 @@
           <div class="hero__inner">
             <div class="hero__content">
               <h1 class="hero__title">Сила жінки: мені можна</h1>
+              <div class="hero__image-mobile">
+                <img src="./images/hero-girl-mobile.png" alt="girl">
+              </div>
               <p class="hero__text">Для тих хто втомився від самообману, заслуговування любові, тривоги та страхів.</p>
               <ul class="hero__counter">
                 <li class="hero__counter-item">
@@ -72,7 +75,7 @@
               </ul>
             </div>
             <div class="hero__image">
-              <img src="./images/hero-girls.png" alt="girl">
+              <img src="./images/hero-girl.png" alt="girl">
             </div>
           </div>
         </div>
@@ -293,6 +296,32 @@
       </section>
     </main>
     <footer class="footer"></footer>
+
+    <div id="popup" class="popup">
+      <a href="##" class="popup__area"></a>
+      <div class="popup__wrapper">
+        <div class="popup__content">
+          <a class="popup__close" href="##">X</a>
+          <div class="popup__image">
+            <img src="./images/anketa.png" alt="">
+          </div>
+          <form id="form" class="anketa" action="#">
+            <div class="anketa__image">
+              <img src="./images/popup-img.jpg" alt="img">
+            </div>
+            <ul class="anketa__list">
+              <li>
+                <input id="formName" type="text" name="name" class="anketa__input _req" placeholder="Ваше ім’я*">
+              </li>
+              <li>
+                <input id="formPhone" type="tel" name="phone" class="anketa__input _req" placeholder="Ваш телефон*">
+              </li>
+            </ul>
+            <button type="submit" class="anketa__btn">Відправити</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="./js/burger.js"></script>

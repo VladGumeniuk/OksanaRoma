@@ -115,6 +115,20 @@
         }
     }
 
+    &__image-mobile {
+        display: none;
+
+        @media (max-width:768px) {
+            display: block;
+            margin-top: 15px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+    }
+
     // .hero__info
 
     &__info {
