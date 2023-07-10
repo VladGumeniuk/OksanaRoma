@@ -1,0 +1,67 @@
+.about {
+
+    // .about__inner
+
+    &__inner {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+
+        @media (max-width:768px) {
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+            gap: 25px;
+        }
+    }
+
+    // .about__image
+
+    &__image {
+        display: flex;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // .about__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    // .about__name
+
+    &__name {
+        font-family: Viaoda Libre;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+    // .about__skill
+
+    &__skill {
+        color: $colorSecondary;
+        font-size: 12px;
+        margin-bottom: 34px;
+        text-transform: uppercase;
+    }
+
+    // .about__text
+
+    &__text {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width:768px) {
+    .revers {
+        order: 2;
+    }
+}

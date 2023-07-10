@@ -1,0 +1,63 @@
+.study {
+
+    // .study__list
+
+    &__list {
+        max-width: 760px;
+        margin: 50px auto 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        @media (max-width:768px) {
+            grid-template-columns: repeat(1, 1fr);
+            margin: 25px auto 0;
+        }
+    }
+
+    // .study__card
+
+    &__card {
+        padding: 10px;
+        border-radius: 5px;
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    // .study__card-inner
+
+    &__card-inner {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    // .study__card-number
+
+    &__card-number {
+        margin-right: 13px;
+        color: $colorSecondary;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    // .study__card-icon2
+
+    &__card-icon2 {
+        margin-left: auto;
+    }
+
+    // .study__card-title
+
+    &__card-title {
+        margin-bottom: 10px;
+        @include adaptiv-value('font-size', 16, 12);
+        font-weight: 500;
+    }
+
+    // .study__card-text
+
+    &__card-text {
+        @include adaptiv-value('font-size', 16, 12);
+    }
+}
