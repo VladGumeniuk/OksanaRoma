@@ -15,12 +15,18 @@
         }
     }
 
+    &__card {
+        display: flex;
+    }
+
     // .answer__btn
 
     &__btn {
+        display: flex;
+        justify-content: space-between;
         width: 100%;
         position: relative;
-        padding: 18px 10px;
+        padding: 18px 20px 18px 10px;
         @include adaptiv-value('font-size', 20, 16);
         text-transform: uppercase;
         text-align: left;
@@ -46,4 +52,25 @@
             padding-left: 20px;
         }
     }
+}
+
+.answer__open {
+    font-weight: 500;
+    display: block;
+    font-size: 20px;
+}
+
+.active .answer__open {
+    display: none;
+}
+
+.answer__close {
+    display: none;
+}
+
+.active .answer__close {
+    font-weight: 500;
+    display: block;
+    font-size: 24px;
+
 }

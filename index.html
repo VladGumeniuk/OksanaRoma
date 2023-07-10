@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OksanaRoma</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -254,6 +255,8 @@
             <li>
               <button class="answer__btn">
                 Якщо не встигаю потрапити на ефір?
+                <span class="answer__open">+</span>
+                <span class="answer__close">-</span>
               </button>
               <div class="answer__text">
                 урок можна переглянути в записі
@@ -262,6 +265,8 @@
             <li>
               <button class="answer__btn">
                 Якщо я не хочу/не можу робити Д/З
+                <span class="answer__open">+</span>
+                <span class="answer__close">-</span>
               </button>
               <div class="answer__text">
                 Д/З є абсолютно обовʼязковими для виконання. Невиконання позбавляє вас можливості бути учасницею курсу
@@ -270,6 +275,8 @@
             <li>
               <button class="answer__btn">
                 Маю велике бажання, та є сумніви?
+                <span class="answer__open">+</span>
+                <span class="answer__close">-</span>
               </button>
               <div class="answer__text">
                 Оберіть себе. Ви маєте бути готовими до змін
@@ -278,6 +285,8 @@
             <li>
               <button class="answer__btn">
                 Маю велике бажання пройти курс, та не маю фінансів?
+                <span class="answer__open">+</span>
+                <span class="answer__close">-</span>
               </button>
               <div class="answer__text">
                 У нас діє три тарифи, а також є можливість оплати частинами.
@@ -286,6 +295,8 @@
             <li>
               <button class="answer__btn">
                 Як можна записатися?
+                <span class="answer__open">+</span>
+                <span class="answer__close">-</span>
               </button>
               <div class="answer__text">
                 Ось за цим посиланням.
@@ -480,6 +491,37 @@
           </ul>
         </div>
       </section>
+      <section class="gallery section">
+        <h3 class="title">ФОТОГАЛЕРЕЯ</h3>
+        <div class="swiper myGallery">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide gallery__card">
+              <img data-id="0" src="./images/reviews/1.jpg" alt="img">
+            </div>
+            <div class="swiper-slide gallery__card">
+              <img data-id="1" src="./images/reviews/2.jpg" alt="img">
+            </div>
+            <div class="swiper-slide gallery__card">
+              <img data-id="2" src="./images/reviews/3.jpg" alt="img">
+            </div>
+            <div class="swiper-slide gallery__card">
+              <img data-id="3" src="./images/reviews/4.jpg" alt="img">
+            </div>
+            <div class="swiper-slide gallery__card">
+              <img data-id="4" src="./images/reviews/5.jpg" alt="img">
+            </div>
+            <div class="swiper-slide gallery__card">
+              <img data-id="5" src="./images/reviews/6.jpg" alt="img">
+            </div>
+            <div class="swiper-slide gallery__card">
+              <img data-id="6" src="./images/reviews/7.jpg" alt="img">
+            </div>
+            <div class="swiper-slide gallery__card">
+              <img data-id="7" src="./images/reviews/8.jpg" alt="img">
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer"></footer>
 
@@ -489,11 +531,11 @@
         <div class="popup__content">
           <a class="popup__close" href="##">X</a>
           <div class="popup__image">
-            <img src="./images/anketa.png" alt="">
+            <img src="#" alt="">
           </div>
           <form id="form" class="anketa" action="#">
             <div class="anketa__image">
-              <img src="./images/popup-img.jpg" alt="img">
+              <img src="#" alt="img">
             </div>
             <ul class="anketa__list">
               <li>
@@ -511,9 +553,50 @@
         </div>
       </div>
     </div>
+
+    <div class="gallery__swiper">
+      <div class="gallery__wrapper">
+
+        <div class="swiper gallerySlide">
+          <div class="gallery__close">X</div>
+          <div class="swiper-wrapper" style="max-width: 300px; margin: 0 auto;">
+            <div class="swiper-slide">
+              <img class="swiper__image-gallery" src="./images/reviews/1.jpg" alt="img">
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper__image-gallery" src="./images/reviews/2.jpg" alt="img">
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper__image-gallery" src="./images/reviews/3.jpg" alt="img">
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper__image-gallery" src="./images/reviews/4.jpg" alt="img">
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper__image-gallery" src="./images/reviews/5.jpg" alt="img">
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper__image-gallery" src="./images/reviews/6.jpg" alt="img">
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper__image-gallery" src="./images/reviews/7.jpg" alt="img">
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper__image-gallery" src="./images/reviews/8.jpg" alt="img">
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./js/burger.js"></script>
+  <script src="./js/gallery-swiper.js"></script>
+  <script src="./js/swiper.js"></script>
   <script src="./js/answer.js"></script>
   <script src="./js/counter.js"></script>
   <script src="./js/main.js"></script>

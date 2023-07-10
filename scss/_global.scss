@@ -80,3 +80,8 @@ body {
 .animation {
   animation: opacity-clock 2s ease;
 }
+
+.open {
+  visibility: visible;
+  opacity: 1;
+}

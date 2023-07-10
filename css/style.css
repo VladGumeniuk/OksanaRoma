@@ -180,6 +180,11 @@ body {
   animation: opacity-clock 2s ease;
 }
 
+.open {
+  visibility: visible;
+  opacity: 1;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -537,10 +542,15 @@ body {
     margin: 25px auto 0;
   }
 }
+.answer__card {
+  display: flex;
+}
 .answer__btn {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   position: relative;
-  padding: 18px 10px;
+  padding: 18px 20px 18px 10px;
   font-size: 20px;
   text-transform: uppercase;
   text-align: left;
@@ -568,6 +578,26 @@ body {
   .answer__text {
     padding-left: 20px;
   }
+}
+
+.answer__open {
+  font-weight: 500;
+  display: block;
+  font-size: 20px;
+}
+
+.active .answer__open {
+  display: none;
+}
+
+.answer__close {
+  display: none;
+}
+
+.active .answer__close {
+  font-weight: 500;
+  display: block;
+  font-size: 24px;
 }
 
 .program__list {
@@ -691,6 +721,86 @@ body {
 .rate__card:hover .rate__card-name {
   color: #fff;
   transition: all 0.3s ease;
+}
+
+.myGallery .swiper-wrapper {
+  margin-top: 55px;
+  transition-timing-function: linear !important;
+}
+
+.gallery__card {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.myGallery img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.gallery__swiper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease;
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.gallery__wrapper {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery__close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 10;
+  color: #2F2F2F;
+  font-size: 22px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .gallery__close {
+    top: 5px;
+    right: 5px;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 15px;
+  color: #000;
 }
 
 .popup {
