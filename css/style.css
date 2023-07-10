@@ -168,12 +168,25 @@ body {
   }
 }
 
+@keyframes opacity-clock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animation {
+  animation: opacity-clock 2s ease;
+}
+
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   background: #F6F6F6;
+  z-index: 20;
 }
 .header__body {
   display: flex;
@@ -555,6 +568,129 @@ body {
   .answer__text {
     padding-left: 20px;
   }
+}
+
+.program__list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .program__list {
+    margin-top: 25px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.program__card {
+  padding: 10px 10px 30px;
+  border-radius: 5px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.program__body {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.program__card-title {
+  margin-left: 10px;
+  color: #FFCB74;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (max-width: 1200px) {
+  .program__card-title {
+    font-size: calc(14px + 6 * ((100vw - 320px) / 880));
+  }
+}
+.program__card-text {
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  .program__card-text {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 880));
+  }
+}
+
+.rate__list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .rate__list {
+    margin-top: 25px;
+    padding-bottom: 15px;
+    overflow-x: scroll;
+  }
+}
+.rate__card {
+  padding: 20px 20px 40px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.rate__card-name {
+  color: #797979;
+  font-size: 20px;
+  margin-bottom: 34px;
+}
+.rate__card-price {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 36px;
+  color: #2F2F2F;
+}
+@media (max-width: 768px) {
+  .rate__card-price {
+    margin-bottom: 30px;
+  }
+}
+.rate__card-sublist {
+  margin-bottom: 50px;
+}
+.rate__card-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: #2F2F2F;
+  font-size: 20px;
+  color: #2F2F2F;
+}
+@media (max-width: 1200px) {
+  .rate__card-text {
+    font-size: calc(14px + 6 * ((100vw - 320px) / 880));
+  }
+}
+.rate__card-text:last-child {
+  margin-bottom: 0;
+}
+.rate__card-text img {
+  margin-right: 10px;
+}
+.rate__btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.rate__card:hover {
+  background: #5E5AFF;
+  transition: all 0.3s ease;
+}
+
+.rate__card:hover .btn__primary {
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.rate__card:hover .rate__card-text,
+.rate__card:hover .rate__card-price,
+.rate__card:hover .rate__card-name {
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
 .popup {

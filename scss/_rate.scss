@@ -1,0 +1,95 @@
+.rate {
+
+    // .rate__list
+
+    &__list {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        @media (max-width:768px) {
+            margin-top: 25px;
+            padding-bottom: 15px;
+            overflow-x: scroll;
+        }
+    }
+
+    // .rate__card
+
+    &__card {
+        padding: 20px 20px 40px;
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    // .rate__card-name
+
+    &__card-name {
+        color: #797979;
+        font-size: 20px;
+        margin-bottom: 34px;
+    }
+
+    // .rate__card-price
+
+    &__card-price {
+        text-align: center;
+        margin-bottom: 60px;
+        font-size: 36px;
+        color: $colorText;
+
+        @media (max-width:768px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    // .rate__card-sublist
+
+    &__card-sublist {
+        margin-bottom: 50px;
+    }
+
+    // .rate__card-text
+
+    &__card-text {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        color: $colorText;
+        @include adaptiv-value('font-size', 20, 14);
+        color: $colorText;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+.rate__card:hover {
+    background: #5E5AFF;
+    transition: all 0.3s ease;
+}
+
+.rate__card:hover .btn__primary {
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.rate__card:hover .rate__card-text,
+.rate__card:hover .rate__card-price,
+.rate__card:hover .rate__card-name {
+    color: #fff;
+    transition: all 0.3s ease;
+}

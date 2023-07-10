@@ -4,6 +4,7 @@
   top: 0;
   left: 0;
   background: $colorBg;
+  z-index: 20;
 
   &__body {
     display: flex;

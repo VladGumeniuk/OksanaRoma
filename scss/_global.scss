@@ -66,3 +66,17 @@ body {
     padding: 15px 0;
   }
 }
+
+@keyframes opacity-clock {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animation {
+  animation: opacity-clock 2s ease;
+}
