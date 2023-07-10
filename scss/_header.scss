@@ -3,11 +3,11 @@
   width: 100%;
   top: 0;
   left: 0;
+  background: $colorBg;
 
   &__body {
     display: flex;
     height: 80px;
-    background: $colorBg;
     align-items: center;
     justify-content: space-between;
   }

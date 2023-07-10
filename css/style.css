@@ -173,11 +173,11 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  background: #F6F6F6;
 }
 .header__body {
   display: flex;
   height: 80px;
-  background: #F6F6F6;
   align-items: center;
   justify-content: space-between;
 }
