@@ -954,7 +954,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: end;
-  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 @media (max-width: 1200px) {
   .rate__card-price {
