@@ -42,11 +42,21 @@
 
     &__card-price {
         text-align: center;
-        @include adaptiv-value('font-size', 34, 16);
+        @include adaptiv-value('font-size', 34, 18);
         color: $colorText;
+        display: flex;
+        justify-content: center;
+        align-items: end;
 
         span {
+            display: block;
+            margin-right: 5px;
             color: #42FF00;
+        }
+
+        .card__price {
+            margin-left: 5px;
+            @include adaptiv-value('font-size', 26, 14);
         }
     }
 
