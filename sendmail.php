@@ -30,28 +30,19 @@
    $mail->addAddress('anastasianik32@gmail.com');
 
    //Тема письма
-   $mail->Subject = 'Бронювання путівки. Лiто 2023';
+   $mail->Subject = 'Бронювання на курс «Сила жінки» ';
 
    //Тело письма
-   $body = '<h1>Бронювання путівки</h1>';
+   $body = '<h1>Заявка на бронювання</h1>';
 
    if (trim(!empty($_POST['name']))) {
       $body.='<p><strong>Імя:</strong> '.$_POST['name'].'</p>';
    }
+   if (trim(!empty($_POST['namefull']))) {
+      $body.='<p><strong>Прізвище:</strong> '.$_POST['namefull'].'</p>';
+   }
    if (trim(!empty($_POST['phone']))) {
       $body.='<p><strong>Телефон:</strong> '.$_POST['phone'].'</p>';
-   }
-   if (trim(!empty($_POST['child']))) {
-      $body.='<p><strong>Кількість дітей:</strong> '.$_POST['child'].'</p>';
-   }
-   if (trim(!empty($_POST['age']))) {
-      $body.='<p><strong>Ім’я та прізвище, вік:</strong> '.$_POST['age'].'</p>';
-   }
-   if (trim(!empty($_POST['age2']))) {
-      $body.='<p><strong>Ім’я та прізвище, вік:</strong> '.$_POST['age2'].'</p>';
-   }
-   if (trim(!empty($_POST['age3']))) {
-      $body.='<p><strong>Ім’я та прізвище, вік:</strong> '.$_POST['age3'].'</p>';
    }
 
    $mail->Body = $body;

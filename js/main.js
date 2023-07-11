@@ -14,3 +14,16 @@ function animation(event) {
         }, 2000);
     });
 }
+
+// ===========================================================
+
+// document.querySelectorAll('.price').forEach((priceId) => {
+
+//     priceId.addEventListener('click', price)
+
+//     function price(event) {
+//         const click = event.target
+//         const id = click.dataset.id
+//         console.log(id);
+//     }
+// })

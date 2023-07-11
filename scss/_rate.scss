@@ -10,9 +10,8 @@
 
         @media (max-width:768px) {
             margin-top: 25px;
-            padding-bottom: 15px;
             overflow-x: scroll;
-            padding: 0 20px;
+            padding: 0 20px 15px;
         }
     }
 
@@ -21,7 +20,7 @@
     &__card {
         display: flex;
         flex-direction: column;
-        padding: 20px 20px 40px;
+        padding: 20px;
         border-radius: 10px;
         background: #FFF;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -33,6 +32,10 @@
         color: #797979;
         font-size: 20px;
         margin-bottom: 34px;
+
+        @media (max-width:768px) {
+            margin-bottom: 15px;
+        }
     }
 
     // .rate__card-price
@@ -68,7 +71,7 @@
         align-items: center;
         margin-bottom: 5px;
         color: $colorText;
-        @include adaptiv-value('font-size', 20, 14);
+        @include adaptiv-value('font-size', 20, 10);
         color: $colorText;
 
         &:last-child {
@@ -77,6 +80,10 @@
 
         img {
             margin-right: 10px;
+
+            @media (max-width:768px) {
+                width: 15px;
+            }
         }
     }
 
