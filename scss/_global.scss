@@ -1,7 +1,7 @@
 body {
   font-family: "Gotham", sans-serif;
   color: $colorText;
-  background: $colorBg;
+  background: $colorBody;
 }
 
 .container {
@@ -20,19 +20,6 @@ body {
   flex-grow: 1;
 }
 
-.btn__primary {
-  color: $colorText;
-  font-size: 18px;
-  display: inline-block;
-  padding: 8px 26px;
-  background: $colorSecondary;
-  border-radius: 25px;
-
-  &:hover {
-    opacity: 0.7;
-  }
-}
-
 .hero__title {
   font-family: Viaoda Libre;
   @include adaptiv-value('font-size', 40, 28);
@@ -40,7 +27,7 @@ body {
 }
 
 .title {
-  color: $colorText;
+  color: $colorSecondary;
   text-align: center;
   font-family: Viaoda Libre;
   @include adaptiv-value('font-size', 40, 24);
@@ -52,6 +39,19 @@ body {
   font-size: 18px;
   display: inline-block;
   padding: 8px 26px;
+  border-radius: 25px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.btn__primary {
+  color: $colorBody;
+  font-size: 18px;
+  display: inline-block;
+  padding: 8px 26px;
+  background: $colorSecondary;
   border-radius: 25px;
 
   &:hover {

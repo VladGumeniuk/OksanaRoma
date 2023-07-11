@@ -46,11 +46,12 @@
         padding: 14px 15px 5px;
         border-radius: 15px;
         background: $colorSecondary;
+        color: $colorBody;
         text-align: center;
         font-size: 40px;
 
         @media (max-width:768px) {
-            padding: 14px 10px 5px;
+            padding: 10px 10px 5px;
             font-size: 24px;
         }
     }
@@ -141,6 +142,7 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        color: $colorBody;
     }
 
     // .hero__list-item

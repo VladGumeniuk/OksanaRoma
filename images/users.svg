@@ -1,10 +1,10 @@
 <svg width="33" height="31" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="users.svg" clip-path="url(#clip0_6_939)">
-<path id="Vector" d="M23.6406 26.4976V23.6407C23.6406 22.1253 23.0387 20.672 21.9672 19.6005C20.8956 18.529 19.4423 17.927 17.9269 17.927H6.4994C4.98402 17.927 3.5307 18.529 2.45916 19.6005C1.38763 20.672 0.785645 22.1253 0.785645 23.6407V26.4976" stroke="#FFCB74" stroke-width="1.57128" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_2" d="M12.213 12.2132C15.3686 12.2132 17.9268 9.65498 17.9268 6.4994C17.9268 3.34378 15.3686 0.785645 12.213 0.785645C9.05742 0.785645 6.49927 3.34378 6.49927 6.4994C6.49927 9.65498 9.05742 12.2132 12.213 12.2132Z" stroke="#FFCB74" stroke-width="1.57128" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_3" d="M32.2116 26.4977V23.6409C32.2106 22.3748 31.7893 21.1451 31.0137 20.1445C30.238 19.1439 29.152 18.4292 27.9263 18.1128" stroke="#FFCB74" stroke-width="1.57128" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_4" d="M22.2119 0.971191C23.441 1.28588 24.5303 2.00066 25.3082 3.00287C26.0861 4.00508 26.5084 5.23769 26.5084 6.50639C26.5084 7.77509 26.0861 9.00773 25.3082 10.0099C24.5303 11.0121 23.441 11.7269 22.2119 12.0416" stroke="#FFCB74" stroke-width="1.57128" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_5" d="M8.64209 26.4977L11.5704 29.4259L17.427 23.5693" stroke="#FFCB74" stroke-width="1.57128" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector" d="M23.6406 26.4976V23.6407C23.6406 22.1253 23.0387 20.672 21.9672 19.6005C20.8956 18.529 19.4423 17.927 17.9269 17.927H6.4994C4.98402 17.927 3.5307 18.529 2.45916 19.6005C1.38763 20.672 0.785645 22.1253 0.785645 23.6407V26.4976" stroke="#5E5AFF" stroke-width="1.57128" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M12.213 12.2132C15.3686 12.2132 17.9268 9.65498 17.9268 6.4994C17.9268 3.34378 15.3686 0.785645 12.213 0.785645C9.05742 0.785645 6.49927 3.34378 6.49927 6.4994C6.49927 9.65498 9.05742 12.2132 12.213 12.2132Z" stroke="#5E5AFF" stroke-width="1.57128" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M32.2116 26.4977V23.6409C32.2106 22.3748 31.7893 21.1451 31.0137 20.1445C30.238 19.1439 29.152 18.4292 27.9263 18.1128" stroke="#5E5AFF" stroke-width="1.57128" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M22.2119 0.971191C23.441 1.28588 24.5303 2.00066 25.3082 3.00287C26.0861 4.00508 26.5084 5.23769 26.5084 6.50639C26.5084 7.77509 26.0861 9.00773 25.3082 10.0099C24.5303 11.0121 23.441 11.7269 22.2119 12.0416" stroke="#5E5AFF" stroke-width="1.57128" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M8.64209 26.4977L11.5704 29.4259L17.427 23.5693" stroke="#5E5AFF" stroke-width="1.57128" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
 <clipPath id="clip0_6_939">

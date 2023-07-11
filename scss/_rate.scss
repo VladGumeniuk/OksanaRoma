@@ -12,6 +12,7 @@
             margin-top: 25px;
             padding-bottom: 15px;
             overflow-x: scroll;
+            padding: 0 20px;
         }
     }
 
@@ -38,11 +39,8 @@
 
     &__card-price {
         text-align: center;
-
-        font-size: 36px;
+        @include adaptiv-value('font-size', 36, 20);
         color: $colorText;
-
-
     }
 
     &__card-subprice {
@@ -96,6 +94,7 @@
 
 .rate__card:hover .btn__primary {
     background: #fff;
+    color: $colorText;
     transition: all 0.3s ease;
 }
 
@@ -105,4 +104,10 @@
 .rate__card:hover .rate__card-subprice {
     color: #fff;
     transition: all 0.3s ease;
+}
+
+@media (max-width:768px) {
+    .rate .container {
+        padding: 0;
+    }
 }

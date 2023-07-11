@@ -112,18 +112,6 @@ body {
   flex-grow: 1;
 }
 
-.btn__primary {
-  color: #2F2F2F;
-  font-size: 18px;
-  display: inline-block;
-  padding: 8px 26px;
-  background: #FFCB74;
-  border-radius: 25px;
-}
-.btn__primary:hover {
-  opacity: 0.7;
-}
-
 .hero__title {
   font-family: Viaoda Libre;
   font-size: 40px;
@@ -136,7 +124,7 @@ body {
 }
 
 .title {
-  color: #2F2F2F;
+  color: #5E5AFF;
   text-align: center;
   font-family: Viaoda Libre;
   font-size: 40px;
@@ -156,6 +144,18 @@ body {
   border-radius: 25px;
 }
 .btn__secondary:hover {
+  opacity: 0.7;
+}
+
+.btn__primary {
+  color: #F6F6F6;
+  font-size: 18px;
+  display: inline-block;
+  padding: 8px 26px;
+  background: #5E5AFF;
+  border-radius: 25px;
+}
+.btn__primary:hover {
   opacity: 0.7;
 }
 
@@ -286,7 +286,7 @@ body {
     height: 100%;
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;
-    background: #FFCB74;
+    background: #5E5AFF;
     transition: all 0.5s ease;
   }
   .header__menu.active {
@@ -335,13 +335,14 @@ body {
 .hero__counter-item {
   padding: 14px 15px 5px;
   border-radius: 15px;
-  background: #FFCB74;
+  background: #5E5AFF;
+  color: #F6F6F6;
   text-align: center;
   font-size: 40px;
 }
 @media (max-width: 768px) {
   .hero__counter-item {
-    padding: 14px 10px 5px;
+    padding: 10px 10px 5px;
     font-size: 24px;
   }
 }
@@ -402,12 +403,13 @@ body {
   }
 }
 .hero__info {
-  background: #FFCB74;
+  background: #5E5AFF;
   padding: 20px 0;
 }
 .hero__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  color: #F6F6F6;
 }
 .hero__list-item {
   max-width: 200px;
@@ -462,7 +464,7 @@ body {
   text-transform: uppercase;
 }
 .about__skill {
-  color: #FFCB74;
+  color: #5E5AFF;
   font-size: 12px;
   margin-bottom: 34px;
   text-transform: uppercase;
@@ -503,7 +505,7 @@ body {
 }
 .study__card-number {
   margin-right: 13px;
-  color: #FFCB74;
+  color: #5E5AFF;
   font-size: 30px;
   font-weight: 500;
 }
@@ -598,6 +600,7 @@ body {
   font-weight: 500;
   display: block;
   font-size: 24px;
+  transform: translateY(-10%);
 }
 
 .program__list {
@@ -625,7 +628,7 @@ body {
 }
 .program__card-title {
   margin-left: 10px;
-  color: #FFCB74;
+  color: #5E5AFF;
   font-size: 20px;
   font-weight: 500;
 }
@@ -654,6 +657,7 @@ body {
     margin-top: 25px;
     padding-bottom: 15px;
     overflow-x: scroll;
+    padding: 0 20px;
   }
 }
 .rate__card {
@@ -673,6 +677,11 @@ body {
   text-align: center;
   font-size: 36px;
   color: #2F2F2F;
+}
+@media (max-width: 1200px) {
+  .rate__card-price {
+    font-size: calc(20px + 16 * ((100vw - 320px) / 880));
+  }
 }
 .rate__card-subprice {
   color: #2F2F2F;
@@ -721,6 +730,7 @@ body {
 
 .rate__card:hover .btn__primary {
   background: #fff;
+  color: #2F2F2F;
   transition: all 0.3s ease;
 }
 
@@ -732,6 +742,11 @@ body {
   transition: all 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .rate .container {
+    padding: 0;
+  }
+}
 .circle {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -759,26 +774,9 @@ body {
     width: 150px;
   }
 }
-.circle__position-top {
-  margin-top: 150px;
-}
-@media (max-width: 768px) {
-  .circle__position-top {
-    margin-top: 50px;
-  }
-}
-.circle__position-bottom {
-  margin-bottom: 100px;
-}
-@media (max-width: 768px) {
-  .circle__position-bottom {
-    margin-bottom: 50px;
-  }
-}
 .circle__text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   color: #2F2F2F;
   font-size: 18px;
@@ -796,6 +794,52 @@ body {
 }
 .circle__content {
   max-width: 217px;
+}
+
+.circle__1 {
+  margin-bottom: 70px;
+}
+@media (max-width: 768px) {
+  .circle__1 {
+    margin-bottom: 20px;
+  }
+}
+
+.circle__2 {
+  align-items: end;
+}
+
+.circle__3 {
+  align-items: start;
+}
+
+.circle__4 {
+  margin-top: -150px;
+  align-items: end;
+}
+@media (max-width: 768px) {
+  .circle__4 {
+    margin-top: -50px;
+  }
+}
+
+.circle__5 {
+  margin-top: 70px;
+}
+@media (max-width: 768px) {
+  .circle__5 {
+    margin-top: 30px;
+  }
+}
+
+.circle__6 {
+  margin-top: -150px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .circle__6 {
+    margin-top: -50px;
+  }
 }
 
 .myGallery .swiper-wrapper {
