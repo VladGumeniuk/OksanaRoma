@@ -334,7 +334,12 @@ body {
   gap: 20px;
 }
 .hero__counter-item {
-  padding: 14px 15px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 76px;
+  height: 76px;
   border-radius: 15px;
   background: #5E5AFF;
   color: #F6F6F6;
@@ -343,7 +348,8 @@ body {
 }
 @media (max-width: 768px) {
   .hero__counter-item {
-    padding: 10px 10px 5px;
+    width: 60px;
+    height: 60px;
     font-size: 24px;
   }
 }
