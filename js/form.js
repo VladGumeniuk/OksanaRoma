@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Помилка');
          }
       } else {
-         alert('Заповніть обовязкові поля');
+         alert('Заповніть Обов’язкові поля');
       }
    }
 
