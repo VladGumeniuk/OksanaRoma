@@ -64,7 +64,7 @@
         <div class="flex justify-center text-center md:grid grid-cols-2">
             <div class="flex flex-col justify-center md:items-start">
                 <h1 class="md:text-6xl text-3xl font-secondary uppercase text-text-pink mb-3">сила жінки</h1>
-                <h2 class="uppercase md:text-[32px] font-light text-2xl md:text-left">
+                <h2 class="uppercase md:text-[32px] font-light text-2xl md:text-left text-text-secondary">
                     Внутрішня Магія: від прийняття до свідомих змін
                 </h2>
                 <div class="flex justify-center md:hidden">
@@ -96,7 +96,7 @@
                     </li>
                 </ul>
 
-                <ul class="flex md:space-x-5 mt-[60px] mb-[50px] justify-center">
+                <ul class="flex items-center md:space-x-5 mt-[60px] mb-[50px] justify-center">
                     <li>
                         <a class="btn-primary" href="#price">
                             <span>Обрати тариф</span>
@@ -198,11 +198,8 @@
             <img src="./img/users.svg" alt="icon">
           </div>
         </div>
-        <h3 class="mb-[10px] text-xs md:text-base font-medium text-text-secondary">
-          Теорія + практика в прямому ефірі через платформу Zoom.
-        </h3>
         <p class="text-xs md:text-base font-light text-text-secondary">
-          У нас живе спілкування. Ви отримуєте завдання на тиждень. Я даю приклади, як їх виконувати.
+          Теорія + практика в прямому ефірі через платформу Zoom / Щопонеділка о 20:00 за Києвом
         </p>
       </li>
       <li class="p-[10px] rounded-[5px] bg-white shadow-box">
@@ -215,15 +212,8 @@
             <img src="./img/edit.svg" alt="icon">
           </div>
         </div>
-        <h3 class="mb-[10px] text-xs md:text-base font-medium text-text-secondary">
-          Щотижня ви працюєте над завданнями. Вони є обовʼязковими.
-        </h3>
         <p class="text-xs md:text-base font-light text-text-secondary">
-          Якщо у вас тариф «без зворотного звʼязку», то ви просто в чаті групи (основний) ділитеся враженнями,
-          скидаєте туди свої
-          роботи.
-        </p>
-        <p class="font-medium text-xs md:text-base mt-3 text-text-secondary">Щопонеділка о 20:00 за Києвом у Zoom
+          За тиждень, в залежності від модулю, ви проходите від 2-6 завдань, від виконання якого залежить ваш кінцевий результат
         </p>
       </li>
       <li class="p-[10px] rounded-[5px] bg-white shadow-box">
@@ -237,10 +227,10 @@
           </div>
         </div>
         <h3 class="mb-[10px] text-xs md:text-base font-medium text-text-secondary">
-          Тариф Груповий з підтримкою
+          У нас живе спілкування в Telegram
         </h3>
         <p class="text-xs md:text-base font-light text-text-secondary">
-          та індивідуальний ожначає, що у вас ще буде 40 хв сесія серед тижня для стимуляції вашої роботи.
+          Це душевний, живий чат, обмін результатами та підтримки одна одною. VIP учасниці отримують персональну годинну консультацію посеред тижня
         </p>
       </li>
       <li class="p-[10px] rounded-[5px] bg-white shadow-box">
@@ -257,9 +247,7 @@
           Кожна учасниця стає мотиватором для інших.
         </h3>
         <p class="text-xs md:text-base font-light text-text-secondary">
-          Ви ділитеся в чаті успіхами, задаєте запитання, отримуєте відповіді та підтримку. Це буде дуже душевна
-          жива група, ви
-          полюбите одна одну та вболіватимете одна за одну.
+          Ви ділитеся в чаті успіхами, задаєте запитання, отримуєте відповіді та підтримку
         </p>
       </li>
     </ul>
@@ -285,7 +273,7 @@
                 <p x-show="accordion === item.id" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
               </div>
             </div>
-            <div x-collapse.duraction.600ms x-show="accordion === item.id">
+            <div x-collapse.duraction.600ms x-show="accordion === item.id" class="pt-3">
               <div class="px-4">
                 <p class="text-text-secondary md:text-base text-sm" x-text="item.text"></p>
               </div>
@@ -305,7 +293,7 @@
     <ul class="mt-6 md:mt-[50px] grid grid-cols-2 md:gap-[30px] gap-[15px]">
       <template x-for="item in advances_content">
         <li class="flex items-center">
-          <div class="bg-white shadow-box md:p-3 p-[7px] rounded-[4px]">
+          <div class="shrink-0 max-w-full bg-white shadow-box md:p-3 p-[7px] rounded-[4px]">
             <img class="w-5 md:w-10" :src="item.img" alt="img">
           </div>
           <div class="ml-[10px] text-silver text-[10px] md:text-lg" x-text="item.title"></div>
@@ -318,29 +306,33 @@
         <section class="py-[25px] md:py-[50px]">
   <div class="container max-w-[1200px]">
     <h2 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">я допоможу</h2>
-    <div class="relative mt-6 md:mt-[50px] text-center text-[10px] md:text-base">
+    <div class="relative mt-6 md:mt-[50px] text-center text-[10px] font-bold text-text-secondary md:text-base">
       <img src="./img/oksana-circle.png" alt="oksana">
       <div class="absolute top-[7%] left-[50%] translate-x-[-50%] md:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
         <div>Полюбити та прийняти себе</div>
         <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
       </div>
-      <div class="absolute top-[50%] left-0 translate-y-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+      <div class="absolute top-[15%] right-0 md:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+        <div>Наповнити стосунки гармонією</div>
+        <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
+      </div>
+      <div class="absolute top-[50%] left-[3%] translate-y-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
         <div>Пропрацювати фінансовий стан</div>
         <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
       </div>
-      <div class="absolute top-[50%] right-0 translate-y-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+      <div class="absolute top-[50%] right-[3%] translate-y-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
         <div>Подорожувати коли і куди хочеться</div>
         <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
       </div>
       <div class="absolute bottom-[7%] left-[50%] translate-x-[-50%] md:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
-        <div>Прорацювати глибокі травми</div>
         <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
+        <div>Прорацювати глибокі травми</div>
       </div>
-      <div class="absolute md:bottom-[20%] bottom-[15%] left-[20%] translate-x-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+      <div class="absolute md:bottom-[9%] bottom-[15%] left-[20%] translate-x-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
         <div>Займатися улюбленою справою</div>
         <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
       </div>
-      <div class="absolute md:bottom-[20%] bottom-[15%] right-0 translate-x-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+      <div class="absolute md:bottom-[8%] bottom-[15%] right-0 translate-x-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
         <div>Насолоджуватись кожним днем</div>
         <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
       </div>
@@ -540,12 +532,42 @@
     font-weight: 900;
     color: #FF8098;
   }
+
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 15px;
+    left: auto;
+  }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 15px;
+    right: auto;
+  }
+  @media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 18px;
+      height: 18px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 10px;
+      font-weight: 900;
+    }
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+      right: -25px;
+      left: auto;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      left: -25px;
+      right: auto;
+    }
+  }
 </style>
 
 <section x-data="content" id="gallery" class="py-[25px] md:py-[50px]">
   <h3 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">живі відгуки</h3>
   <div class="swiper mt-6 md:mt-[50px]" x-ref="reviews-swiper">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper items-center">
       <template x-for="(item, index) in reviews_content">
         <div class="swiper-slide">
           <img @click="idSlide = index; show(); initSwiper()" class="cursor-pointer" :src="item.img" :alt="index">
@@ -555,17 +577,17 @@
   </div>
 
   <div x-show="openModal" x-transition.duration.500ms class="fixed inset-0 z-40 blur-overlay flex items-center justify-center">
-      <div class="swiper relative" x-ref="reviews-swiper-modal">
-        <button
-          @click="hide()"
-          type="button"
-          class="absolute top-3 right-3 cursor-pointer z-40 font-black text-b-pink text-xl">
-          X
-        </button>
-        <div class="swiper-wrapper mx-auto max-w-[300px]">
+      <div class="swiper md:!overflow-hidden !overflow-visible relative" x-ref="reviews-swiper-modal">
+        <div class="swiper-wrapper !overflow-visible mx-auto md:max-w-[400px] max-w-[300px] items-center">
           <template x-for="item in reviews_content">
-            <div class="swiper-slide">
+            <div class="swiper-slide relative">
               <img class="" :src="item.img" alt="img">
+              <button
+                @click="hide()"
+                type="button"
+                class="absolute top-3 right-3 cursor-pointer z-40 font-black text-b-pink text-xl">
+                X
+              </button>
             </div>
           </template>
         </div>
@@ -665,7 +687,7 @@
 </section>
     </main>
 
-    <footer class="py-[25px] md:py-[50px] bg-text-pink rounded-[40px]">
+    <footer class="py-[25px] md:py-[50px] bg-text-pink rounded-t-[40px]">
   <div class="container max-w-[1300px]">
     <div class="grid md:grid-cols-2 gap-5">
       <div class="justify-start">
@@ -719,10 +741,12 @@
           </li>
         </ul>
         <h4 class="mb-2 text-silver md:text-2xl text-lg font-medium">Номер телефону:</h4>
-        <a class="mb-2 text-silver md:text-2xl text-lg font-medium" href="tel:+380777777777">+380 77 777 77 77</a>
+        <a class="mb-2 text-silver md:text-2xl text-lg font-medium" href="tel:+380 96 106 10 76">+380 96 106 10 76</a>
         <h4 class="mb-2 text-silver md:text-2xl text-lg font-medium">E-mail:</h4>
         <a class="mb-2 block text-silver md:text-2xl text-lg font-medium" href="mailto:oksanaroma@gmail.com">oksanaroma@gmail.com</a>
-        <a class="mb-2 block text-silver md:text-2xl text-lg font-medium underline" href="#">Публічний договір(Оферта)</a>
+        <a class="mb-2 block text-silver md:text-2xl text-lg font-medium underline" href="/img/agreement-oksana-roma.pdf" download>
+          Публічний договір(Оферта)
+        </a>
         <p class="text-silver md:text-2xl text-base font-medium">Oksana Roma 2024 © Всі права захищені</p>
       </div>
     </div>
@@ -757,7 +781,7 @@
   id="popup"
   class="fixed inset-0 z-40 blur-overlay">
   <div @click.self="$store.popup.hide()" class="flex items-center justify-center px-8 py-3 min-h-screen">
-    <div class="relative flex bg-white-light rounded-[20px] overflow-y-scroll">
+    <div class="relative flex bg-white-light rounded-[20px] max-w-[500px]">
       <button @click="$store.popup.hide()" class="absolute top-3 right-3 font-black text-b-pink text-xl">X</button>
       <form id="form" class="" action="#">
         <div class="rounded-t-[20px] overflow-hidden">

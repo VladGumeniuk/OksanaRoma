@@ -3689,8 +3689,8 @@ const advances_content = [{
   img: "./img/what5.png"
 }, {
   id: 6,
-  title: "емоційно-психологічні зміни вже після першої зустрічі",
-  img: "./img/what6.png"
+  title: "комфортний темп проходження тренінгу",
+  img: "./img/what8.png"
 }, {
   id: 7,
   title: "чесний зворотній звʼязок",
@@ -3698,7 +3698,7 @@ const advances_content = [{
 }, {
   id: 8,
   title: "10% знижки на наступний курс або консультацію",
-  img: "./img/what8.png"
+  img: "./img/what6.png"
 }];
 
 /***/ }),
@@ -3810,22 +3810,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   reviews_content: () => (/* binding */ reviews_content)
 /* harmony export */ });
-const reviews_content = [{
-  id: 1,
-  img: "./img/reviews/1.jpg"
-}, {
-  id: 2,
-  img: "./img/reviews/2.jpg"
-}, {
-  id: 3,
-  img: "./img/reviews/3.jpg"
-}, {
-  id: 4,
-  img: "./img/reviews/4.jpg"
-}, {
-  id: 5,
-  img: "./img/reviews/5.jpg"
-}, {
+const reviews_content = [
+// {
+//     id: 1,
+//     img: "./img/reviews/1.jpg",
+// },
+// {
+//     id: 2,
+//     img: "./img/reviews/2.jpg",
+// },
+// {
+//     id: 3,
+//     img: "./img/reviews/3.jpg",
+// },
+// {
+//     id: 4,
+//     img: "./img/reviews/4.jpg",
+// },
+// {
+//     id: 5,
+//     img: "./img/reviews/5.jpg",
+// },
+{
   id: 6,
   img: "./img/reviews/6.jpg"
 }, {
@@ -3834,6 +3840,48 @@ const reviews_content = [{
 }, {
   id: 8,
   img: "./img/reviews/8.jpg"
+}, {
+  id: 9,
+  img: "./img/reviews/9.jpg"
+}, {
+  id: 10,
+  img: "./img/reviews/10.jpg"
+}, {
+  id: 11,
+  img: "./img/reviews/11.jpg"
+}, {
+  id: 12,
+  img: "./img/reviews/12.jpg"
+}, {
+  id: 13,
+  img: "./img/reviews/13.jpg"
+}, {
+  id: 14,
+  img: "./img/reviews/14.jpg"
+}, {
+  id: 15,
+  img: "./img/reviews/15.jpg"
+}, {
+  id: 16,
+  img: "./img/reviews/16.jpg"
+}, {
+  id: 17,
+  img: "./img/reviews/17.jpg"
+}, {
+  id: 18,
+  img: "./img/reviews/18.jpg"
+}, {
+  id: 19,
+  img: "./img/reviews/19.jpg"
+}, {
+  id: 20,
+  img: "./img/reviews/20.jpg"
+}, {
+  id: 21,
+  img: "./img/reviews/21.jpg"
+}, {
+  id: 22,
+  img: "./img/reviews/22.jpg"
 }];
 
 /***/ }),
