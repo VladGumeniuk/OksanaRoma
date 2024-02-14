@@ -3670,35 +3670,35 @@ __webpack_require__.r(__webpack_exports__);
 const advances_content = [{
   id: 1,
   title: "емоційно - психологічні зміни вже після першої зустрічі",
-  img: "./img/ManRaisingHand.svg"
+  img: "./img/what1.png"
 }, {
   id: 2,
   title: "трансформаційні практики",
-  img: "./img/what8.svg"
+  img: "./img/what2.png"
 }, {
   id: 3,
   title: "в групі до 15 учасниць",
-  img: "./img/DirectHit.svg"
+  img: "./img/what3.png"
 }, {
   id: 4,
   title: "авторські медитації",
-  img: "./img/what7.svg"
+  img: "./img/what4.png"
 }, {
   id: 5,
   title: "особистий підхід до кожної",
-  img: "./img/what3.svg"
+  img: "./img/what5.png"
 }, {
   id: 6,
   title: "емоційно-психологічні зміни вже після першої зустрічі",
-  img: "./img/what6.svg"
+  img: "./img/what6.png"
 }, {
   id: 7,
   title: "чесний зворотній звʼязок",
-  img: "./img/what4.svg"
+  img: "./img/what7.png"
 }, {
   id: 8,
   title: "10% знижки на наступний курс або консультацію",
-  img: "./img/what5.svg"
+  img: "./img/what8.png"
 }];
 
 /***/ }),

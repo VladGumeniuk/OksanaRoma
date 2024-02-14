@@ -121,19 +121,19 @@
         <section class="py-[25px] md:py-[50px]">
     <div class="container max-w-[1300px]">
       <ul class="grid md:grid-cols-4 grid-cols-2 gap-5 text-text-secondary">
-        <li class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-b-pink md:text-lg text-center max-w-[278px] font-light">
+        <li class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-[#D83957] md:text-lg text-center max-w-[278px] font-light">
           <div class="font-medium text-xl md:text-5xl">8000+</div>
           <div class="">людей отримали допомогу</div>
         </li>
-        <li class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-b-pink md:text-lg text-center max-w-[278px] font-light">
+        <li class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-[#D83957] md:text-lg text-center max-w-[278px] font-light">
           <div class="font-medium text-xl md:text-5xl">12+</div>
           <div class="">років досвіду в сфері психології</div>
         </li>
-        <li class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-b-pink md:text-lg text-center max-w-[278px] font-light">
+        <li class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-[#D83957] md:text-lg text-center max-w-[278px] font-light">
           <div class="font-medium text-xl md:text-5xl">5000+</div>
           <div class="">проведених офлайн тренінгів</div>
         </li>
-        <li class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-b-pink md:text-lg text-center max-w-[278px] font-light">
+        <li class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-[#D83957] md:text-lg text-center max-w-[278px] font-light">
           <div class="font-medium text-xl md:text-5xl">500+</div>
           <div class="">успішних онлайн курсів</div>
         </li>
@@ -270,10 +270,12 @@
     <h2 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">На курсі на вас чекає</h2>
 
     <div class="md:grid grid-cols-2 md:mt-[50px] items-center mt-6 gap-6 flex-col flex">
-      <ul x-data="{accordion: null}" class="space-x-4">
+      <ul x-data="{accordion: null}" class="gap-4 flex flex-col">
         <template x-for="item in program_content">
-          <li class="rounded-[10px] py-3 px-[10px]">
-            <div @click="accordion === item.id ? accordion = null : accordion = item.id" class="flex justify-between items-center cursor-pointer shadow-box bg-white">
+          <li class="">
+            <div
+              @click="accordion === item.id ? accordion = null : accordion = item.id"
+              class="flex justify-between items-center cursor-pointer shadow-box bg-white rounded-[10px] py-2 px-[10px]">
               <div class="flex gap-3">
                 <img :src="item.img" :alt="item.id">
                 <p class="text-text-pink md:text-base text-sm" x-text="item.title"></p>
@@ -456,7 +458,7 @@
             <img class="mr-3" src="./img/check.svg" alt="icon">
             <span>Спілкування з іншими участниками в Telegram</span>
           </li>
-          <li class="flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
             <img class="mr-3" src="./img/check.svg" alt="icon">
             <span>Прямі ефіри з можливістю задати питання</span>
           </li>
@@ -676,74 +678,70 @@
 </section>
     </main>
 
-    <footer class="py-[25px] md:py-[50px]">
+    <footer class="py-[25px] md:py-[50px] bg-text-pink rounded-[40px]">
   <div class="container max-w-[1300px]">
-    <div class="md:flex block">
-      <div class="">
-        <img class="max-w-full" src="./img/footer-img.jpg" alt="img">
-      </div>
-      <div class="md:pl-[50px]">
-        <div class="flex items-center">
-          <div class="">
-            <img src="./img/footer-logo.svg" alt="logo">
-          </div>
-          <div class="md:ml-10 ml-5">
-            <img src="./img/footer-name.svg" alt="name">
-          </div>
-        </div>
-        <div class="mt-4 text-center">
-          <div class="text-black-light text-2xl mb-5">Соціальні мережі:</div>
-          <ul class="flex justify-center gap-5">
-            <li>
-              <a target="_blank" href="https://www.instagram.com/oksana_roma_new/">
-                <img src="./img/inst.svg" alt="social">
-              </a>
-            </li>
-            <li>
-              <a target="_blank" href="https://www.facebook.com/oksanaromacoaching">
-                <img src="./img/facebook.svg" alt="social">
-              </a>
-            </li>
-            <li>
-              <a target="_blank" href="https://www.youtube.com/channel/UCVtfi4y8S84kNJtOtTW3VYg">
-                <img src="./img/youtube.svg" alt="social">
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="mt-[50px] grid grid-cols-2">
-          <ul>
-            <li class="text-black-light text-xs md:text-xl mb-5">
-              <div class="text-black-light text-xs md:text-xl mb-2">Мій основний сайт:</div>
-              <a target="_blank" href="https://www.oksanaroma.com">
-                <span>www.oksanaroma.com</span>
-              </a>
-            </li>
-            <li class="text-black-light text-xs md:text-xl mb-5">
-              <div class="text-black-light text-xs md:text-xl mb-2">Номер телефону:</div>
-              <a href="tel:380961061076">
-                <span>+380 96 106 10 76</span>
-                <span>+380 96 106 10 76</span>
-              </a>
-            </li>
-            <li class="text-black-light text-xs md:text-xl">
-              <div class="text-black-light text-xs md:text-xl mb-2">E-mail:</div>
-              <a href="mailto:oksanitochka@gmail.com">
-                <span>oksanitochka@gmail.com</span>
-              </a>
-            </li>
-          </ul>
-          <div class="text-center">
-            <button type="button" @click="$store.popup.show()" class="btn-primary inline-flex">
-              <span>ЗАМОВИТИ ДЗВІНОК</span>
-            </button>
-          </div>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="justify-start">
+        <h3 class="mb-3 text-silver font-secondary uppercase text-2xl md:text-[40px]">OKSANA ROMA</h3>
+        <ul class="flex space-x-3 md:mb-[60px] mb-8">
+          <li>
+            <img src="./img/mastercard.svg" alt="mastercard">
+          </li>
+          <li>
+            <img src="./img/visa.svg" alt="visa">
+          </li>
+        </ul>
+        <div class="text-silver md:text-xl text-base">
+          <p>Контакти ФОП:</p>
+          <p>Романенко Оксана Миколаївна</p>
+          <p>ІПН(ЄДРПОУ): 3080016560</p>
+          <p>Рахунок: UA693220010000026005340002207</p>
+          <p>Банк:АКЦІОНЕРНЕ ТОВАРИСТВО "УНІВЕРСАЛ БАНК"</p>
+          <p>МФО 322001</p>
+          <p>ЄДРПОУ 21133352</p>
         </div>
       </div>
 
+      <div class="justify-end text-right">
+        <h4 class="mb-2 text-silver md:text-2xl text-lg font-medium">Соціальні мережі:</h4>
+        <ul class="flex justify-end gap-5 mb-2">
+          <li>
+            <a target="_blank" href="https://www.instagram.com/oksana_roma_new/">
+              <img src="./img/inst.svg" alt="inst">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.facebook.com/oksanaromacoaching">
+              <img src="./img/facebook.svg" alt="facebook">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.youtube.com/channel/UCVtfi4y8S84kNJtOtTW3VYg">
+              <img src="./img/youtube.svg" alt="youtube">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.youtube.com/channel/UCVtfi4y8S84kNJtOtTW3VYg">
+              <img src="./img/telegram-footer.svg" alt="telegram">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.youtube.com/channel/UCVtfi4y8S84kNJtOtTW3VYg">
+              <img src="./img/tiktok.svg" alt="tiktok">
+            </a>
+          </li>
+        </ul>
+        <h4 class="mb-2 text-silver md:text-2xl text-lg font-medium">Номер телефону:</h4>
+        <a class="mb-2 text-silver md:text-2xl text-lg font-medium" href="tel:+380777777777">+380 77 777 77 77</a>
+        <h4 class="mb-2 text-silver md:text-2xl text-lg font-medium">E-mail:</h4>
+        <a class="mb-2 text-silver md:text-2xl text-lg font-medium" href="mailto:oksanaroma@gmail.com">oksanaroma@gmail.com</a>
+        <a class="mb-2 text-silver md:text-2xl text-lg font-medium underline" href="#">Публічний договір(Оферта)</a>
+        <p class="text-silver md:text-2xl text-lg font-medium">Oksana Roma 2024 © Всі права захищені.@gmail.com</p>
+      </div>
     </div>
   </div>
 </footer>
+
     <article
         x-cloak
         id="mobile-menu"
