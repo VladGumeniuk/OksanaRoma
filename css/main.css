@@ -762,9 +762,6 @@ video {
 .max-w-full{
   max-width: 100%;
 }
-.max-w-\[730px\]{
-  max-width: 730px;
-}
 .flex-1{
   -webkit-box-flex: 1;
   -ms-flex: 1 1 0%;
