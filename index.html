@@ -351,15 +351,17 @@
         <section id="price" class="py-[25px] md:py-[50px]">
   <div class="container">
     <h2 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">Варіанти співпраці</h2>
-    <ul class="w-full mt-6 md:mt-[50px] max-w-[770px] mx-auto grid md:grid-cols-2 grid-cols-1 gap-5 px-5 pb-4">
+    <div class="mt-6 md:mt-[50px] rounded-tl-[10px] rounded-br-[10px] bg-[#D83957] max-w-[770px] mx-auto uppercase text-silver text-center mf:text-[36px] text-xl py-3 font-secondary">знижка 20%</div>
+    <ul class="w-full max-w-[770px] mx-auto grid md:grid-cols-2 grid-cols-1 gap-5 px-5 pb-4">
       <li class="group flex flex-col p-5 rounded-[10px] bg-white shadow-box hover:bg-b-pink duration-300">
         <div class="group-hover:text-white text-[#797979] text-xl mb-4 md:mb-8">Starndart</div>
 
         <div class="text-center text-lg md:text-[34px] text-black-light flex justify-center whitespace-nowrap">
-          <span class="block mr-[5px] text-[#42FF00]">9000₴</span> / <p class="group-hover:text-white ml-[5px] flex items-end text-base md:text-2xl">11 000₴</p>
+          <span class="block mr-[5px] text-[#42FF00]">9000₴</span>
+<!--          / <p class="group-hover:text-white ml-[5px] flex items-end text-base md:text-2xl">11 000₴</p>-->
         </div>
 
-        <div class="grid grid-cols-2 justify-center mb-[30px] md:mb-[60px]">
+        <div class="grid grid-cols-1 justify-center mb-[30px] md:mb-[60px]">
           <div class="text-black-light  text-[10px] text-center group-hover:text-white">(при оплаті до 29.02)</div>
           <div class="text-black-light  text-[10px] text-center group-hover:text-white"></div>
         </div>
@@ -413,10 +415,11 @@
         <div class="group-hover:text-white text-[#797979] text-xl mb-4 md:mb-8">VIP</div>
 
         <div class="text-center text-lg md:text-[34px] text-black-light flex justify-center whitespace-nowrap">
-          <span class="block mr-[5px] text-[#42FF00]">17 000₴</span> / <p class="group-hover:text-white ml-[5px] items-end flex text-base md:text-2xl">19 000₴</p>
+          <span class="block mr-[5px] text-[#42FF00]">17 000₴</span>
+<!--          / <p class="group-hover:text-white ml-[5px] items-end flex text-base md:text-2xl">19 000₴</p>-->
         </div>
 
-        <div class="grid grid-cols-2 justify-center mb-[30px] md:mb-[60px]">
+        <div class="grid grid-cols-1 justify-center mb-[30px] md:mb-[60px]">
           <div class="text-black-light  text-[10px] text-center group-hover:text-white">(при оплаті до 29.02)</div>
           <div class="text-black-light  text-[10px] text-center group-hover:text-white"></div>
         </div>
@@ -483,23 +486,10 @@
   </div>
 </section>
 
-        <section class="bg-text-pink rounded-[40px] md:py-[69px] py-8">
-  <div class="container max-w-[1300px]">
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-5 items-center">
-      <div>
-        <img src="./img/monobank.svg" alt="monobank">
-      </div>
-      <div class="text-center">
-        <p class="md:text-2xl text-base text-silver font-secondary">
-          Обирай зручний варіант співпраці, а оплату можна розбити на частини
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+
         <section class="py-[25px] md:py-[50px]">
   <div class="container max-w-[1300px]">
-    <div class="grid md:grid-cols-2 grid-cols-1 items-center md:gap-[70px] gap-3">
+    <div class="grid md:grid-cols-2 grid-cols-1 items-center md:gap-[70px] gap-3 md:text-left text-center">
       <div>
         <h3 class="mb-5 text-[#797979] font-secondary uppercase md:text-[32px] text-lg">
           Є питання?
@@ -573,7 +563,7 @@
   }
 </style>
 
-<section x-data="content" id="gallery" class="py-[25px] md:py-[50px] bg-text-pink rounded-[40px]">
+<section x-data="content" id="gallery" class="py-[25px] md:py-[50px] bg-text-pink rounded-[30px]">
   <h2 class="text-silver text-center font-secondary uppercase text-2xl md:text-[40px]">живі відгуки</h2>
   <div class="swiper mt-6 md:mt-[50px]" x-ref="reviews-swiper">
     <div class="swiper-wrapper items-center">
