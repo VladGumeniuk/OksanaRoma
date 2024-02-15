@@ -1,827 +1,831 @@
 <!DOCTYPE html>
 <html class="h-full">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="css/main.css">
-  <script defer src="js/main.js"></script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="css/main.css">
+<script defer src="js/main.js"></script>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="./favicon/site.webmanifest">
-  <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+<link rel="manifest" href="./favicon/site.webmanifest">
+<link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Курс «Сила жінки»">
-  <meta property="og:site_name" content="OksanaRoma">
-  <meta property="og:url" content="http://oksanaroma.com.ua">
-  <meta property="og:description" content="">
-  <meta property="og:image" content="http://oksanaroma.com.ua/images/form-image.jpg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Курс «Сила жінки»">
+<meta property="og:site_name" content="OksanaRoma">
+<meta property="og:url" content="http://oksanaroma.com.ua">
+<meta property="og:description" content="">
+<meta property="og:image" content="http://oksanaroma.com.ua/images/form-image.jpg">
 
-  <title>OksanaRoma</title>
+    <title>OksanaRoma</title>
 </head>
 
 <body x-data>
-  <!-- HEADER -->
-  <header id="header" class="fixed top-0 left-0 z-10 w-full blur-overlay"
-    x-init="document.documentElement.style.setProperty('--header-height',Math.round($el.clientHeight) + 'px')"
-    @resize.window="document.documentElement.style.setProperty('--header-height',Math.round($el.clientHeight) + 'px')">
+    <!-- HEADER -->
+<header
+        id="header"
+        class="fixed top-0 left-0 z-10 w-full blur-overlay"
+        x-init="document.documentElement.style.setProperty('--header-height',Math.round($el.clientHeight) + 'px')"
+        @resize.window="document.documentElement.style.setProperty('--header-height',Math.round($el.clientHeight) + 'px')"
+>
     <div class="container">
-      <div class="flex justify-between items-center">
-        <button type="button" @click="$store.mobileMenu.show()" class="block md:hidden">
-          <img class="w-full h-full object-cover" src="./img/burger.svg" alt="burger">
-        </button>
-        <a class="header__logo" href="#">
-          <img src="./img/logo.svg" alt="logo">
-        </a>
-
-        <ul class="gap-4 font-bold text-text-pink md:flex hidden">
-          <li><a class="text-lg hover:opacity-70" href="#program">Програма</a></li>
-          <li><a class="text-lg hover:opacity-70" href="#add">Переваги</a></li>
-          <li><a class="text-lg hover:opacity-70" href="#price">Тарифи</a></li>
-          <li><a class="text-lg hover:opacity-70" href="#gallery">Відгуки</a></li>
-        </ul>
-
-        <button type="button" @click="$store.popup.show()" class="btn-primary">
-          <span>ПРИЄДНАТИСЯ</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-
-  <main class="main">
-    <section class="pt-[calc(20px+var(--header-height))] md:pt-[calc(50px+var(--header-height))]">
-      <div class="container max-w-[1300px]">
-        <div class="flex justify-center text-center md:grid grid-cols-2">
-          <div class="flex flex-col justify-center md:items-start">
-            <h1 class="md:text-6xl text-3xl font-secondary uppercase text-text-pink mb-3">сила жінки</h1>
-            <h2 class="uppercase md:text-[32px] font-light text-2xl md:text-left text-text-secondary">
-              Внутрішня Магія: від прийняття до свідомих змін
-            </h2>
-            <div class="flex justify-center md:hidden">
-              <img src="./img/hero-girl-mobile.png" alt="girl">
-            </div>
-            <p class="mt-10 text-2xl text-text-pink uppercase">СТАРТ: 11.03.2024</p>
-
-            <ul x-data="counter" class="relative flex justify-center md:mt-[60px] mt-[30px] gap-5">
-              <li x-show="timeOut" x-transition.duration.500ms
-                class="absolute inset-0 blur-overlay flex justify-center items-center">
-                <div class="border-[3px] border-white-light w-fit px-3">
-                  <span class="text-2xl uppercase text-white-light font-black">час вийшов</span>
-                </div>
-              </li>
-              <li
-                class="flex items-center justify-center flex-col md:w-[76px] md:h-[76px] w-[60px] h-[60px] text-2xl rounded-[15px] bg-b-pink text-white-light text-center md:text-4xl">
-                <div x-text="days"></div>
-                <div class="text-xs">днів</div>
-              </li>
-              <li
-                class="flex items-center justify-center flex-col md:w-[76px] md:h-[76px] w-[60px] h-[60px] text-2xl rounded-[15px] bg-b-pink text-white-light text-center md:text-4xl">
-                <div x-text="hours"></div>
-                <div class="text-xs">годин</div>
-              </li>
-              <li
-                class="flex items-center justify-center flex-col md:w-[76px] md:h-[76px] w-[60px] h-[60px] text-2xl rounded-[15px] bg-b-pink text-white-light text-center md:text-4xl">
-                <div x-text="minutes"></div>
-                <div class="text-xs">хвилин</div>
-              </li>
-              <li
-                class="flex items-center justify-center flex-col md:w-[76px] md:h-[76px] w-[60px] h-[60px] text-2xl rounded-[15px] bg-b-pink text-white-light text-center md:text-4xl">
-                <div x-text="seconds"></div>
-                <div class="text-xs">секунд</div>
-              </li>
-            </ul>
-
-            <ul class="flex items-center md:space-x-5 mt-[60px] mb-[50px] justify-center">
-              <li>
-                <a class="btn-primary" href="#price">
-                  <span>Обрати тариф</span>
-                </a>
-              </li>
-              <li>
-                <a class="btn-secondary flex gap-2" href="#program">
-                  <span>Дізнатись деталі</span>
-                  <img src="./img/arrow-right.svg" alt="arrow">
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="md:block hidden">
-            <img src="./img/oksanaroma.png" alt="girl">
-            <p class="text-[32px] font-secondary text-text-pink">Оксана Рома</p>
-            <p class="text-base text-text-secondary">Міжнародний психолог, коуч, спікер, тренер НЛП та гіпнотерапевт,
-              тренер з ораторського мистецтва</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="py-[25px] md:py-[50px]">
-      <div class="container max-w-[1300px]">
-        <ul class="grid md:grid-cols-4 grid-cols-2 gap-5 text-text-secondary">
-          <li
-            class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-[#D83957] md:text-lg text-center max-w-[278px] font-light">
-            <div class="font-medium text-xl md:text-5xl">8000+</div>
-            <div class="">людей отримали допомогу</div>
-          </li>
-          <li
-            class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-[#D83957] md:text-lg text-center max-w-[278px] font-light">
-            <div class="font-medium text-xl md:text-5xl">12+</div>
-            <div class="">років досвіду в сфері психології</div>
-          </li>
-          <li
-            class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-[#D83957] md:text-lg text-center max-w-[278px] font-light">
-            <div class="font-medium text-xl md:text-5xl">5000+</div>
-            <div class="">проведених офлайн тренінгів</div>
-          </li>
-          <li
-            class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-[#D83957] md:text-lg text-center max-w-[278px] font-light">
-            <div class="font-medium text-xl md:text-5xl">500+</div>
-            <div class="">успішних онлайн курсів</div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="py-[25px] md:py-[50px]">
-      <div class="container max-w-[1300px]">
-        <div class="flex items-center flex-col md:flex-row">
-          <div class="max-w-[497px] w-full flex justify-center">
-            <img class="w-full object-cover" src="./img/oksanaroma-about.png" alt="img">
-          </div>
-          <div class="max-[647px] mx-auto">
-            <div class="mb-8 md:mb-15 text-text-pink font-secondary text-xl md:text-[40px] uppercase">
-              зі мною ви:
-            </div>
-            <ul class="">
-              <li class="flex mb-[10px] items-center">
-                <img src="./img/star-pink.svg" alt="icon">
-                <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">Відновите свою самоцінність та
-                  самоповагу</div>
-              </li>
-              <li class="flex mb-[10px] items-center">
-                <img src="./img/star-pink.svg" alt="icon">
-                <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">Отримаєте план дій для досягнення
-                  своїх цілей</div>
-              </li>
-              <li class="flex mb-[10px] items-center">
-                <img src="./img/star-pink.svg" alt="icon">
-                <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">Перестанете ховатися за відмовками
-                </div>
-              </li>
-              <li class="flex mb-[10px] items-center">
-                <img src="./img/star-pink.svg" alt="icon">
-                <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">Навчитеся бути чесною з собою</div>
-              </li>
-              <li class="flex mb-[10px] items-center">
-                <img src="./img/star-pink.svg" alt="icon">
-                <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">позбудетесь застарілих установок
-                </div>
-              </li>
-              <li class="flex mb-[10px] items-center">
-                <img src="./img/star-pink.svg" alt="icon">
-                <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">Поліпшите якість стосунків</div>
-              </li>
-              <li class="flex mb-[10px] items-center">
-                <img src="./img/star-pink.svg" alt="icon">
-                <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">Відчуєте щастя, радість та гармонію
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="program" class="py-[25px] md:py-[50px] bg-text-pink rounded-[40px]">
-      <div class="container">
-        <h2 class="text-silver text-center font-secondary uppercase text-2xl md:text-[40px]">Як проходить навчання?</h2>
-        <ul class="md:mt-[50px] mt-[25px] grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-5">
-          <li class="p-[10px] rounded-[5px] bg-white shadow-box">
-            <div class="flex items-center mb-[10px]">
-              <div class="mr-3 text-text-pink text-[30px] font-medium">01</div>
-              <div class="study__card-icon">
-                <img src="./img/arrow.svg" alt="icon">
-              </div>
-              <div class="ml-auto">
-                <img src="./img/users.svg" alt="icon">
-              </div>
-            </div>
-            <p class="text-xs md:text-base font-light text-text-secondary">
-              Теорія + практика в прямому ефірі через платформу Zoom / Щопонеділка о 20:00 за Києвом
-            </p>
-          </li>
-          <li class="p-[10px] rounded-[5px] bg-white shadow-box">
-            <div class="flex items-center mb-[10px]">
-              <div class="mr-3 text-text-pink text-[30px] font-medium">02</div>
-              <div class="study__card-icon">
-                <img src="./img/arrow.svg" alt="icon">
-              </div>
-              <div class="ml-auto">
-                <img src="./img/edit.svg" alt="icon">
-              </div>
-            </div>
-            <p class="text-xs md:text-base font-light text-text-secondary">
-              За тиждень, в залежності від модулю, ви проходите від 2-6 завдань, від виконання якого залежить ваш
-              кінцевий результат
-            </p>
-          </li>
-          <li class="p-[10px] rounded-[5px] bg-white shadow-box">
-            <div class="flex items-center mb-[10px]">
-              <div class="mr-3 text-text-pink text-[30px] font-medium">03</div>
-              <div class="study__card-icon">
-                <img src="./img/arrow.svg" alt="icon">
-              </div>
-              <div class="ml-auto">
-                <img src="./img/finish.svg" alt="icon">
-              </div>
-            </div>
-            <h3 class="mb-[10px] text-xs md:text-base font-medium text-text-secondary">
-              У нас живе спілкування в Telegram
-            </h3>
-            <p class="text-xs md:text-base font-light text-text-secondary">
-              Це душевний, живий чат, обмін результатами та підтримки одна одною. VIP учасниці отримують персональну
-              годинну консультацію посеред тижня
-            </p>
-          </li>
-          <li class="p-[10px] rounded-[5px] bg-white shadow-box">
-            <div class="flex items-center mb-[10px]">
-              <div class="mr-3 text-text-pink text-[30px] font-medium">04</div>
-              <div class="study__card-icon">
-                <img src="./img/arrow.svg" alt="icon">
-              </div>
-              <div class="ml-auto">
-                <img src="./img/thumbs-up.svg" alt="icon">
-              </div>
-            </div>
-            <h3 class="mb-[10px] text-xs md:text-base font-medium text-text-secondary">
-              Кожна учасниця стає мотиватором для інших.
-            </h3>
-            <p class="text-xs md:text-base font-light text-text-secondary">
-              Ви ділитеся в чаті успіхами, задаєте запитання, отримуєте відповіді та підтримку
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section x-data="content" class="py-[25px] md:py-[50px]">
-      <div class="container max-w-[1300px]">
-        <h2 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">На курсі на вас чекає
-        </h2>
-
-        <div class="md:grid grid-cols-2 md:mt-[50px] items-center mt-6 gap-6 flex-col flex">
-          <ul x-data="{accordion: null}" class="gap-4 flex flex-col">
-            <template x-for="item in program_content">
-              <li class="">
-                <div @click="accordion === item.id ? accordion = null : accordion = item.id"
-                  class="flex justify-between items-center cursor-pointer shadow-box bg-white rounded-[10px] py-2 px-[10px]">
-                  <div class="flex gap-3">
-                    <img :src="item.img" :alt="item.id">
-                    <p class="text-text-pink md:text-base text-sm" x-text="item.title"></p>
-                  </div>
-                  <div>
-                    <p x-show="accordion !== item.id" class="text-text-pink text-2xl">+</p>
-                    <p x-show="accordion === item.id" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
-                  </div>
-                </div>
-                <div x-collapse.duraction.600ms x-show="accordion === item.id" class="pt-3">
-                  <div class="px-4">
-                    <p class="text-text-secondary md:text-base text-sm" x-text="item.text"></p>
-                  </div>
-                </div>
-              </li>
-            </template>
-          </ul>
-          <div class="">
-            <img src="./img/oksana-with-flower.png" alt="img">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section x-data="content" id="add" class="py-[25px] md:py-[50px] bg-text-pink rounded-[40px]">
-      <div class="container max-w-[1300px]">
-        <h2 class="text-silver text-center font-secondary uppercase text-2xl md:text-[40px]">На вас чекає:</h2>
-        <ul class="mt-6 md:mt-[50px] grid grid-cols-2 md:gap-[30px] gap-[15px]">
-          <template x-for="item in advances_content">
-            <li class="flex items-center">
-              <div class="shrink-0 max-w-full bg-white shadow-box md:p-3 p-[7px] rounded-[4px]">
-                <img class="w-5 md:w-10" :src="item.img" alt="img">
-              </div>
-              <div class="ml-[10px] text-silver text-[10px] md:text-lg" x-text="item.title"></div>
-            </li>
-          </template>
-        </ul>
-      </div>
-    </section>
-
-    <section class="py-[25px] md:py-[50px]">
-      <div class="container max-w-[1200px]">
-        <h2 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">я допоможу</h2>
-        <div class="relative mt-6 md:mt-[50px] text-center text-[10px] font-bold text-text-secondary md:text-base">
-          <img src="./img/oksana-circle.png" alt="oksana">
-          <div
-            class="absolute top-[7%] left-[50%] translate-x-[-50%] md:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
-            <div>Полюбити та прийняти себе</div>
-            <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
-          </div>
-          <div
-            class="absolute top-[15%] right-0 md:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
-            <div>Наповнити стосунки гармонією</div>
-            <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
-          </div>
-          <div
-            class="absolute top-[50%] left-[3%] translate-y-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
-            <div>Пропрацювати фінансовий стан</div>
-            <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
-          </div>
-          <div
-            class="absolute top-[50%] right-[3%] translate-y-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
-            <div>Подорожувати коли і куди хочеться</div>
-            <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
-          </div>
-          <div
-            class="absolute bottom-[7%] left-[50%] translate-x-[-50%] md:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
-            <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
-            <div>Прорацювати глибокі травми</div>
-          </div>
-          <div
-            class="absolute md:bottom-[9%] bottom-[15%] left-[20%] translate-x-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
-            <div>Займатися улюбленою справою</div>
-            <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
-          </div>
-          <div
-            class="absolute md:bottom-[8%] bottom-[15%] right-0 translate-x-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
-            <div>Насолоджуватись кожним днем</div>
-            <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="price" class="py-[25px] md:py-[50px]">
-      <div class="container">
-        <h2 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">Варіанти співпраці</h2>
-        <ul class="w-full mt-6 md:mt-[50px] max-w-[770px] mx-auto grid md:grid-cols-2 grid-cols-1 gap-5 px-5 pb-4">
-          <li class="group flex flex-col p-5 rounded-[10px] bg-white shadow-box hover:bg-b-pink duration-300">
-            <div class="group-hover:text-white text-[#797979] text-xl mb-4 md:mb-8">Starndart</div>
-
-            <div class="text-center text-lg md:text-[34px] text-black-light flex justify-center whitespace-nowrap">
-              <span class="block mr-[5px] text-[#42FF00]">9000₴</span> / <p
-                class="group-hover:text-white ml-[5px] flex items-end text-base md:text-2xl">11 000₴</p>
-            </div>
-
-            <div class="grid grid-cols-2 justify-center mb-[30px] md:mb-[60px]">
-              <div class="text-black-light  text-[10px] text-center group-hover:text-white">(при оплаті до 29.02)</div>
-              <div class="text-black-light  text-[10px] text-center group-hover:text-white"></div>
-            </div>
-            <ul class="flex-1 mb-5">
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>9 тижнів роботи над собою</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>9 модулів навчання</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Бонусний модуль на вибір</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Доступ до практичних завдань</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Роздатковий матеріал до програми</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Спілкування з іншими участниками в Telegram</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Прямі ефіри з можливістю задати питання</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Zoom - зустріч з тренером</span>
-              </li>
-              <li class="group-hover:text-white flex items-center md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Зворотній зв’язок практичних завдань</span>
-              </li>
-            </ul>
-            <div class="flex w-full justify-center">
-              <button type="button" @click="$store.popup.id = 'starndart'; $store.popup.show()"
-                class="uppercase group-hover:text-black-light group-hover:bg-white duration-300 btn-primary price">
-                забронювати
-              </button>
-            </div>
-          </li>
-          <li class="group flex flex-col p-5 rounded-[10px] bg-white shadow-box hover:bg-b-pink duration-300">
-            <div class="group-hover:text-white text-[#797979] text-xl mb-4 md:mb-8">VIP</div>
-
-            <div class="text-center text-lg md:text-[34px] text-black-light flex justify-center whitespace-nowrap">
-              <span class="block mr-[5px] text-[#42FF00]">17 000₴</span> / <p
-                class="group-hover:text-white ml-[5px] items-end flex text-base md:text-2xl">19 000₴</p>
-            </div>
-
-            <div class="grid grid-cols-2 justify-center mb-[30px] md:mb-[60px]">
-              <div class="text-black-light  text-[10px] text-center group-hover:text-white">(при оплаті до 29.02)</div>
-              <div class="text-black-light  text-[10px] text-center group-hover:text-white"></div>
-            </div>
-            <ul class="flex-1 mb-5">
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>9 тижнів роботи над собою</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>9 модулів навчання</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Бонусний модуль на вибір</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Доступ до практичних завдань</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Роздатковий матеріал до програми</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Спілкування з іншими участниками в Telegram</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Прямі ефіри з можливістю задати питання</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Zoom - зустріч з тренером</span>
-              </li>
-              <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Зворотній зв’язок практичних завдань</span>
-              </li>
-              <li class="group-hover:text-white flex items-center md:text-base text-[10px] text-black-light">
-                <img class="mr-3" src="./img/check.svg" alt="icon">
-                <span>Персональний супровід, мотивація, коуч</span>
-              </li>
-            </ul>
-            <div class="flex w-full justify-center">
-              <button type="button" @click="$store.popup.id = 'vip'; $store.popup.show()"
-                class="uppercase group-hover:text-black-light group-hover:bg-white duration-300 btn-primary price">
-                забронювати
-              </button>
-            </div>
-          </li>
-        </ul>
-
-        <div class="flex justify-center">
-          <div
-            class="py-2 md:px-10 px-6 rounded-[70px] border-[1px] border-text-pink inline-flex justify-center items-center mt-6 font-secondary text-light-blue text-center">
-            <img class="mr-3" src="./img/gift.png" alt="icon">
-            <p class="text-sm md:text-2xl font-medium text-text-pink">Бронюйте зараз та отримуйте онлайн
-              <br> консультацію зі мною в подарунок
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-text-pink rounded-[40px] md:py-[69px] py-8">
-      <div class="container max-w-[1300px]">
-        <div class="grid md:grid-cols-2 grid-cols-1 gap-5 items-center">
-          <div>
-            <img src="./img/monobank.svg" alt="monobank">
-          </div>
-          <div class="text-center">
-            <p class="md:text-2xl text-base text-silver font-secondary">
-              Обирай зручний варіант співпраці, а оплату можна розбити на частини
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="py-[25px] md:py-[50px]">
-      <div class="container max-w-[1300px]">
-        <div class="grid md:grid-cols-2 grid-cols-1 items-center md:gap-[70px] gap-3">
-          <div>
-            <h3 class="mb-5 text-[#797979] font-secondary uppercase md:text-[32px] text-lg">
-              Є питання?
-            </h3>
-            <h3 class="mb-5 text-text-pink font-secondary uppercase md:text-[36px] text-xl">
-              Напиши мені його зараз!
-            </h3>
-            <a class="inline-flex items-center gap-2 py-1 pl-1 pr-3 bg-[#25A3E2] text-white rounded-[25px] hover:opacity-70 duration-300"
-              href="https://t.me/Oksanikett" target="_blank">
-              <img src="./img/telegram.svg" alt="telegram">
-              <span>Перейти в Telegram</span>
+        <div class="flex justify-between items-center">
+            <button type="button" @click="$store.mobileMenu.show()" class="block md:hidden">
+                <img class="w-full h-full object-cover" src="./img/burger.svg" alt="burger">
+            </button>
+            <a class="header__logo" href="#">
+                <img src="./img/logo.svg" alt="logo">
             </a>
-          </div>
-          <div>
-            <img src="./img/oksana-telegram.png" alt="oksana">
-          </div>
+
+            <ul class="gap-4 font-bold text-text-pink md:flex hidden">
+                <li><a class="text-lg hover:opacity-70" href="#program">Програма</a></li>
+                <li><a class="text-lg hover:opacity-70" href="#add">Переваги</a></li>
+                <li><a class="text-lg hover:opacity-70" href="#price">Тарифи</a></li>
+                <li><a class="text-lg hover:opacity-70" href="#gallery">Відгуки</a></li>
+            </ul>
+
+            <button type="button" @click="$store.popup.show()" class="btn-primary">
+                <span>ПРИЄДНАТИСЯ</span>
+            </button>
         </div>
-      </div>
-    </section>
-    <style>
-      .swiper-wrapper {
-        -webkit-transition-timing-function: linear !important;
-        transition-timing-function: linear !important;
-      }
+    </div>
+</header>
 
-      .swiper-button-next,
-      .swiper-button-prev {
-        background: #F6F6F6;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-      }
 
-      .swiper-button-next:after,
-      .swiper-button-prev:after {
-        font-size: 14px;
-        font-weight: 900;
-        color: #FF8098;
-      }
-
-      .swiper-button-next,
-      .swiper-rtl .swiper-button-prev {
-        right: 15px;
-        left: auto;
-      }
-
-      .swiper-button-prev,
-      .swiper-rtl .swiper-button-next {
-        left: 15px;
-        right: auto;
-      }
-
-      @media (max-width: 768px) {
-
-        .swiper-button-next,
-        .swiper-button-prev {
-          width: 18px;
-          height: 18px;
-        }
-
-        .swiper-button-next:after,
-        .swiper-button-prev:after {
-          font-size: 10px;
-          font-weight: 900;
-        }
-
-        .swiper-button-next,
-        .swiper-rtl .swiper-button-prev {
-          right: -25px;
-          left: auto;
-        }
-
-        .swiper-button-prev,
-        .swiper-rtl .swiper-button-next {
-          left: -25px;
-          right: auto;
-        }
-      }
-    </style>
-
-    <section x-data="content" id="gallery" class="py-[25px] md:py-[50px]">
-      <h3 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">живі відгуки</h3>
-      <div class="swiper mt-6 md:mt-[50px]" x-ref="reviews-swiper">
-        <div class="swiper-wrapper items-center">
-          <template x-for="(item, index) in reviews_content">
-            <div class="swiper-slide">
-              <img @click="idSlide = index; show(); initSwiper()" class="cursor-pointer" :src="item.img" :alt="index">
-            </div>
-          </template>
-        </div>
-      </div>
-
-      <div x-show="openModal" x-transition.duration.500ms
-        class="fixed inset-0 z-40 blur-overlay flex items-center justify-center">
-        <div class="swiper md:!overflow-hidden !overflow-visible relative" x-ref="reviews-swiper-modal">
-          <div class="swiper-wrapper !overflow-visible mx-auto md:max-w-[400px] max-w-[300px] items-center">
-            <template x-for="item in reviews_content">
-              <div class="swiper-slide relative">
-                <img class="" :src="item.img" alt="img">
-                <button @click="hide()" type="button"
-                  class="absolute top-3 right-3 cursor-pointer z-40 font-black text-b-pink text-xl">
-                  X
-                </button>
-              </div>
-            </template>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </div>
-    </section>
-    <section class="py-[25px] md:py-[50px]">
-      <div class="container">
-        <h2 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">відповіді на поширені
-          запитання</h2>
-        <ul x-data="{accordion: null}" class="max-w-[740px] mx-auto mt-6 md:mt-[50px] space-y-5">
-          <li>
-            <button @click="accordion === 1 ? accordion = null : accordion = 1" type="button"
-              class="flex justify-between w-full py-4 px-5 md:text-xl text-base uppercase text-black-light bg-white shadow-box rounded-[10px]">
-              Якщо не встигаю потрапити на ефір?
-              <p x-show="accordion !== 1" class="text-text-pink text-2xl">+</p>
-              <p x-show="accordion === 1" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
-            </button>
-            <div x-show="accordion === 1" x-collapse.duration.500ms class="text-black-light md:text-xl text-base px-5">
-              урок можна переглянути в записі
-            </div>
-          </li>
-          <li>
-            <button @click="accordion === 2 ? accordion = null : accordion = 2" type="button"
-              class="flex justify-between w-full py-4 px-5 md:text-xl text-base uppercase text-black-light bg-white shadow-box rounded-[10px]">
-              Якщо я не хочу/не можу робити Д/З
-              <p x-show="accordion !== 2" class="text-text-pink text-2xl">+</p>
-              <p x-show="accordion === 2" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
-            </button>
-            <div x-show="accordion === 2" x-collapse.duration.500ms class="text-black-light md:text-xl text-base px-5">
-              Д/З є абсолютно обовʼязковими для виконання. Невиконання позбавляє вас можливості бути учасницею курсу
-            </div>
-          </li>
-          <li>
-            <button @click="accordion === 3 ? accordion = null : accordion = 3" type="button"
-              class="flex justify-between w-full py-4 px-5 md:text-xl text-base uppercase text-black-light bg-white shadow-box rounded-[10px]">
-              Маю велике бажання, та є сумніви?
-              <p x-show="accordion !== 3" class="text-text-pink text-2xl">+</p>
-              <p x-show="accordion === 3" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
-            </button>
-            <div x-show="accordion === 3" x-collapse.duration.500ms class="text-black-light md:text-xl text-base px-5">
-              Оберіть себе. Ви маєте бути готовими до змін
-            </div>
-          </li>
-          <li>
-            <button @click="accordion === 4 ? accordion = null : accordion = 4" type="button"
-              class="flex justify-between w-full py-4 px-5 md:text-xl text-base uppercase text-black-light bg-white shadow-box rounded-[10px]">
-              Маю велике бажання пройти курс, та не маю фінансів?
-              <p x-show="accordion !== 4" class="text-text-pink text-2xl">+</p>
-              <p x-show="accordion === 4" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
-            </button>
-            <div x-show="accordion === 4" x-collapse.duration.500ms class="text-black-light md:text-xl text-base px-5">
-              У нас діє три тарифи, а також є можливість оплати частинами.
-            </div>
-          </li>
-          <li>
-            <button @click="accordion === 5 ? accordion = null : accordion = 5" type="button"
-              class="flex justify-between w-full py-4 px-5 md:text-xl text-base uppercase text-black-light bg-white shadow-box rounded-[10px]">
-              Як можна записатися?
-              <p x-show="accordion !== 5" class="text-text-pink text-2xl">+</p>
-              <p x-show="accordion === 5" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
-            </button>
-            <div x-show="accordion === 5" x-collapse.duration.500ms class="text-black-light md:text-xl text-base">
-              <a href="#price"
-                class="text-black-light md:text-xl text-base underline hover:text-red-800 duration-300 px-5">
-                Ось за цим посиланням.
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="py-[25px] md:py-[50px] bg-text-pink rounded-t-[40px]">
+    <main class="main">
+        <section class="pt-[calc(20px+var(--header-height))] md:pt-[calc(50px+var(--header-height))]">
     <div class="container max-w-[1300px]">
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="justify-start">
-          <h3 class="mb-3 text-silver font-secondary uppercase text-2xl md:text-[40px]">OKSANA ROMA</h3>
-          <ul class="flex space-x-3 md:mb-[60px] mb-8">
-            <li>
-              <img src="./img/mastercard.svg" alt="mastercard">
-            </li>
-            <li>
-              <img src="./img/visa.svg" alt="visa">
-            </li>
-          </ul>
-          <div class="text-silver md:text-xl text-base">
-            <p>Контакти ФОП:</p>
-            <p>Романенко Оксана Миколаївна</p>
-            <p>ІПН(ЄДРПОУ): 3080016560</p>
-            <p>Рахунок: UA693220010000026005340002207</p>
-            <p>Банк:АКЦІОНЕРНЕ ТОВАРИСТВО "УНІВЕРСАЛ БАНК"</p>
-            <p>МФО 322001</p>
-            <p>ЄДРПОУ 21133352</p>
-          </div>
-        </div>
+        <div class="flex justify-center text-center md:grid grid-cols-2">
+            <div class="flex flex-col justify-center md:items-start">
+                <h1 class="md:text-6xl text-3xl font-secondary uppercase text-text-pink mb-3">сила жінки</h1>
+                <h2 class="uppercase md:text-[32px] font-light text-2xl md:text-left text-text-secondary">
+                    Внутрішня Магія: від прийняття до свідомих змін
+                </h2>
+                <div class="flex justify-center md:hidden">
+                    <img src="./img/hero-girl-mobile.png" alt="girl">
+                </div>
+                <p class="mt-10 text-2xl text-text-pink uppercase">СТАРТ: 11.03.2024</p>
 
-        <div class="justify-end text-right">
-          <h4 class="mb-2 text-silver md:text-2xl text-lg font-medium">Соціальні мережі:</h4>
-          <ul class="flex justify-end gap-5 mb-2">
-            <li>
-              <a target="_blank" href="https://www.instagram.com/oksana_roma_new/">
-                <img src="./img/inst.svg" alt="inst">
-              </a>
+                <ul x-data="counter" class="relative flex justify-center md:mt-[60px] mt-[30px] gap-5">
+                    <li x-show="timeOut" x-transition.duration.500ms class="absolute inset-0 blur-overlay flex justify-center items-center">
+                        <div class="border-[3px] border-white-light w-fit px-3">
+                            <span class="text-2xl uppercase text-white-light font-black">час вийшов</span>
+                        </div>
+                    </li>
+                    <li class="flex items-center justify-center flex-col md:w-[76px] md:h-[76px] w-[60px] h-[60px] text-2xl rounded-[15px] bg-b-pink text-white-light text-center md:text-4xl">
+                        <div x-text="days"></div>
+                        <div class="text-xs">днів</div>
+                    </li>
+                    <li class="flex items-center justify-center flex-col md:w-[76px] md:h-[76px] w-[60px] h-[60px] text-2xl rounded-[15px] bg-b-pink text-white-light text-center md:text-4xl">
+                        <div x-text="hours"></div>
+                        <div class="text-xs">годин</div>
+                    </li>
+                    <li class="flex items-center justify-center flex-col md:w-[76px] md:h-[76px] w-[60px] h-[60px] text-2xl rounded-[15px] bg-b-pink text-white-light text-center md:text-4xl">
+                        <div x-text="minutes"></div>
+                        <div class="text-xs">хвилин</div>
+                    </li>
+                    <li class="flex items-center justify-center flex-col md:w-[76px] md:h-[76px] w-[60px] h-[60px] text-2xl rounded-[15px] bg-b-pink text-white-light text-center md:text-4xl">
+                        <div x-text="seconds"></div>
+                        <div class="text-xs">секунд</div>
+                    </li>
+                </ul>
+
+                <ul class="flex items-center md:space-x-5 mt-[60px] mb-[50px] justify-center">
+                    <li>
+                        <a class="btn-primary" href="#price">
+                            <span>Обрати тариф</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-secondary flex gap-2" href="#program">
+                            <span>Дізнатись деталі</span>
+                            <img src="./img/arrow-right.svg" alt="arrow">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:block hidden">
+                <img src="./img/oksanaroma.png" alt="girl">
+                <p class="text-[32px] font-secondary text-text-pink">Оксана Рома</p>
+                <p class="text-base text-text-secondary">Міжнародний психолог, коуч, спікер, тренер НЛП та гіпнотерапевт, тренер з ораторського мистецтва</p>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="py-[25px] md:py-[50px]">
+    <div class="container max-w-[1300px]">
+      <ul class="grid md:grid-cols-4 grid-cols-2 gap-5 text-text-secondary">
+        <li class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-[#D83957] md:text-lg text-center max-w-[278px] font-light">
+          <div class="font-medium text-xl md:text-5xl">8000+</div>
+          <div class="">людей отримали допомогу</div>
+        </li>
+        <li class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-[#D83957] md:text-lg text-center max-w-[278px] font-light">
+          <div class="font-medium text-xl md:text-5xl">12+</div>
+          <div class="">років досвіду в сфері психології</div>
+        </li>
+        <li class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-[#D83957] md:text-lg text-center max-w-[278px] font-light">
+          <div class="font-medium text-xl md:text-5xl">5000+</div>
+          <div class="">проведених офлайн тренінгів</div>
+        </li>
+        <li class="uppercase text-[8px] rounded-[20px] py-5 bg-bg-pink border-[2px] border-[#D83957] md:text-lg text-center max-w-[278px] font-light">
+          <div class="font-medium text-xl md:text-5xl">500+</div>
+          <div class="">успішних онлайн курсів</div>
+        </li>
+      </ul>
+    </div>
+</section>
+        <section class="py-[25px] md:py-[50px]">
+    <div class="container max-w-[1300px]">
+      <div class="flex items-center flex-col md:flex-row">
+        <div class="max-w-[497px] w-full flex justify-center">
+          <img class="w-full object-cover" src="./img/oksanaroma-about.png" alt="img">
+        </div>
+        <div class="max-[647px] mx-auto">
+          <div class="mb-8 md:mb-15 text-text-pink font-secondary text-xl md:text-[40px] uppercase">
+            зі мною ви:
+          </div>
+          <ul class="">
+            <li class="flex mb-[10px] items-center">
+              <img src="./img/star-pink.svg" alt="icon">
+              <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">Відновите свою самоцінність та самоповагу</div>
             </li>
-            <li>
-              <a target="_blank" href="https://www.facebook.com/oksanaromacoaching">
-                <img src="./img/facebook.svg" alt="facebook">
-              </a>
+            <li class="flex mb-[10px] items-center">
+              <img src="./img/star-pink.svg" alt="icon">
+              <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">Отримаєте план дій для досягнення своїх цілей</div>
             </li>
-            <li>
-              <a target="_blank" href="https://www.youtube.com/channel/UCVtfi4y8S84kNJtOtTW3VYg">
-                <img src="./img/youtube.svg" alt="youtube">
-              </a>
+            <li class="flex mb-[10px] items-center">
+              <img src="./img/star-pink.svg" alt="icon">
+              <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">Перестанете ховатися за відмовками</div>
             </li>
-            <li>
-              <a target="_blank" href="https://t.me/Oksanikett">
-                <img src="./img/telegram-footer.svg" alt="telegram">
-              </a>
+            <li class="flex mb-[10px] items-center">
+              <img src="./img/star-pink.svg" alt="icon">
+              <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">Навчитеся бути чесною з собою</div>
             </li>
-            <li>
-              <a target="_blank" href="https://www.tiktok.com/@oksanaroma1?_t=8jpPrCeJc9P&_r=1">
-                <img src="./img/tiktok.svg" alt="tiktok">
-              </a>
+            <li class="flex mb-[10px] items-center">
+              <img src="./img/star-pink.svg" alt="icon">
+              <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">позбудетесь застарілих установок</div>
+            </li>
+            <li class="flex mb-[10px] items-center">
+              <img src="./img/star-pink.svg" alt="icon">
+              <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">Поліпшите якість стосунків</div>
+            </li>
+            <li class="flex mb-[10px] items-center">
+              <img src="./img/star-pink.svg" alt="icon">
+              <div class="ml-[6px] text-black-light lowercase text-sm md:text-xl">Відчуєте щастя, радість та гармонію</div>
             </li>
           </ul>
-          <h4 class="mb-2 text-silver md:text-2xl text-lg font-medium">Номер телефону:</h4>
-          <a class="mb-2 text-silver md:text-2xl text-lg font-medium" href="tel:+380 96 106 10 76">+380 96 106 10 76</a>
-          <h4 class="mb-2 text-silver md:text-2xl text-lg font-medium">E-mail:</h4>
-          <a class="mb-2 block text-silver md:text-2xl text-lg font-medium"
-            href="mailto:oksanaroma@gmail.com">oksanaroma@gmail.com</a>
-          <a class="mb-2 block text-silver md:text-2xl text-lg font-medium underline"
-            href="./img/agreement-oksana-roma.pdf" download>
-            Публічний договір(Оферта)
-          </a>
-          <p class="text-silver md:text-2xl text-base font-medium">Oksana Roma 2024 © Всі права захищені</p>
         </div>
       </div>
     </div>
-  </footer>
-
-  <article x-cloak id="mobile-menu" x-show="$store.mobileMenu.visible"
-    x-transition:enter="transition ease-out duration-300" x-transition:enter-start="translate-x-3/4"
-    x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in duration-300"
-    x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-3/4"
-    class="absolute top-0 right-0 flex h-full w-full z-20 touch-none flex-col items-start justify-start md:hidden bg-bg-pink">
-    <div class="w-full flex justify-end p-3">
-      <button type="button" @click="$store.mobileMenu.hide()" class="text-2xl text-white-light">X</button>
-    </div>
-    <ul class="space-y-5 font-medium flex h-full flex-col justify-center items-center w-full">
-      <li><a @click="$store.mobileMenu.hide()" class="text-2xl text-white-light" href="#program">Програма</a></li>
-      <li><a @click="$store.mobileMenu.hide()" class="text-2xl text-white-light" href="#add">Переваги</a></li>
-      <li><a @click="$store.mobileMenu.hide()" class="text-2xl text-white-light" href="#price">Тарифи</a></li>
-      <li><a @click="$store.mobileMenu.hide()" class="text-2xl text-white-light" href="#gallery">Відгуки</a></li>
-    </ul>
-  </article>
-  <div x-show="$store.popup.visible" x-transition.duration.500ms id="popup" class="fixed inset-0 z-40 blur-overlay">
-    <div @click.self="$store.popup.hide()" class="flex items-center justify-center px-8 py-3 min-h-screen">
-      <div class="relative flex bg-white-light rounded-[20px] max-w-[500px]">
-        <button @click="$store.popup.hide()" class="absolute top-3 right-3 font-black text-b-pink text-xl">X</button>
-        <form id="form" class="" action="#">
-          <div class="rounded-t-[20px] overflow-hidden">
-            <img class="w-full" src="./img/form-image.jpg" alt="img">
+</section>
+        <section id="program" class="py-[25px] md:py-[50px] bg-text-pink rounded-[40px]">
+  <div class="container">
+    <h2 class="text-silver text-center font-secondary uppercase text-2xl md:text-[40px]">Як проходить навчання?</h2>
+    <ul class="md:mt-[50px] mt-[25px] grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-5">
+      <li class="p-[10px] rounded-[5px] bg-white shadow-box">
+        <div class="flex items-center mb-[10px]">
+          <div class="mr-3 text-text-pink text-[30px] font-medium">01</div>
+          <div class="study__card-icon">
+            <img src="./img/arrow.svg" alt="icon">
           </div>
-          <ul class="max-w-[375px] mx-auto py-10 px-5">
-            <li class="mb-5">
-              <label for="formName" class="text-black-light text-lg mb-4 block">Ім’я*</label>
-              <input id="formName" type="text" name="name"
-                class="submit-error-js px-3 block w-full h-8 text-base text-black-light rounded-[10px] bg-transparent border-[1px] border-light-blue _req">
-            </li>
-            <li class="mb-5">
-              <label for="formPhone" class="text-black-light text-lg mb-4 block">Номер телефону*</label>
-              <input id="formPhone" type="tel" name="phone"
-                class="submit-error-js px-3 block w-full h-8 text-base text-black-light rounded-[10px] bg-transparent border-[1px] border-light-blue _req">
-            </li>
-            <li class="mb-5">
-              <label for="formEmail" class="text-black-light text-lg mb-4 block">Email</label>
-              <input id="formEmail" type="email" name="email"
-                class="px-3 block w-full h-8 text-base text-black-light rounded-[10px] bg-transparent border-[1px] border-light-blue">
-            </li>
-            <li class="mb-5">
-              <div data-id="0" class="popup__price-silver hidden">
-                <label>Тариф: 7000₴ / 8000₴ (Silver)</label>
-                <input type="hidden" name="silver" class="silver">
+          <div class="ml-auto">
+            <img src="./img/users.svg" alt="icon">
+          </div>
+        </div>
+        <p class="text-xs md:text-base font-light text-text-secondary">
+          Теорія + практика в прямому ефірі через платформу Zoom / Щопонеділка о 20:00 за Києвом
+        </p>
+      </li>
+      <li class="p-[10px] rounded-[5px] bg-white shadow-box">
+        <div class="flex items-center mb-[10px]">
+          <div class="mr-3 text-text-pink text-[30px] font-medium">02</div>
+          <div class="study__card-icon">
+            <img src="./img/arrow.svg" alt="icon">
+          </div>
+          <div class="ml-auto">
+            <img src="./img/edit.svg" alt="icon">
+          </div>
+        </div>
+        <p class="text-xs md:text-base font-light text-text-secondary">
+          За тиждень, в залежності від модулю, ви проходите від 2-6 завдань, від виконання якого залежить ваш кінцевий результат
+        </p>
+      </li>
+      <li class="p-[10px] rounded-[5px] bg-white shadow-box">
+        <div class="flex items-center mb-[10px]">
+          <div class="mr-3 text-text-pink text-[30px] font-medium">03</div>
+          <div class="study__card-icon">
+            <img src="./img/arrow.svg" alt="icon">
+          </div>
+          <div class="ml-auto">
+            <img src="./img/finish.svg" alt="icon">
+          </div>
+        </div>
+        <h3 class="mb-[10px] text-xs md:text-base font-medium text-text-secondary">
+          У нас живе спілкування в Telegram
+        </h3>
+        <p class="text-xs md:text-base font-light text-text-secondary">
+          Це душевний, живий чат, обмін результатами та підтримки одна одною. VIP учасниці отримують персональну годинну консультацію посеред тижня
+        </p>
+      </li>
+      <li class="p-[10px] rounded-[5px] bg-white shadow-box">
+        <div class="flex items-center mb-[10px]">
+          <div class="mr-3 text-text-pink text-[30px] font-medium">04</div>
+          <div class="study__card-icon">
+            <img src="./img/arrow.svg" alt="icon">
+          </div>
+          <div class="ml-auto">
+            <img src="./img/thumbs-up.svg" alt="icon">
+          </div>
+        </div>
+        <h3 class="mb-[10px] text-xs md:text-base font-medium text-text-secondary">
+          Кожна учасниця стає мотиватором для інших.
+        </h3>
+        <p class="text-xs md:text-base font-light text-text-secondary">
+          Ви ділитеся в чаті успіхами, задаєте запитання, отримуєте відповіді та підтримку
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+        <section x-data="content" class="py-[25px] md:py-[50px]">
+  <div class="container max-w-[1300px]">
+    <h2 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">На курсі на вас чекає</h2>
+
+    <div class="md:grid grid-cols-2 md:mt-[50px] items-center mt-6 gap-6 flex-col flex">
+      <ul x-data="{accordion: null}" class="gap-4 flex flex-col">
+        <template x-for="item in program_content">
+          <li class="">
+            <div
+              @click="accordion === item.id ? accordion = null : accordion = item.id"
+              class="flex justify-between items-center mb-4 cursor-pointer shadow-box bg-white rounded-[10px] py-2 px-[10px]">
+              <div class="flex gap-3">
+                <img :src="item.img" :alt="item.id">
+                <p class="text-text-pink md:text-base text-sm" x-text="item.title"></p>
               </div>
-              <div x-show="$store.popup.priceGold" class="popup__price-gold">
-                <label>Тариф: 9000₴ / 11 000₴ (Starndart)</label>
-                <input type="hidden" name="gold" class="gold" :value="$store.popup.valueGold">
+              <div>
+                <p x-show="accordion !== item.id" class="text-text-pink text-2xl">+</p>
+                <p x-show="accordion === item.id" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
               </div>
-              <div x-show="$store.popup.priceDiamond" class="popup__price-diamond">
-                <label>Тариф: 17 000₴ / 19 000₴ (VIP)</label>
-                <input type="hidden" name="diamond" class="diamond" :value="$store.popup.valueDiamond">
+            </div>
+            <div x-collapse.duraction.600ms x-show="accordion === item.id" class="">
+              <div class="px-4">
+                <p class="text-text-secondary md:text-base text-sm" x-text="item.text"></p>
+                <p class="text-text-secondary md:text-base text-sm" x-text="item.text2"></p>
               </div>
-            </li>
-            <li class="flex justify-center">
-              <button type="submit" class="btn-primary">Відправити</button>
-            </li>
-          </ul>
-        </form>
+            </div>
+          </li>
+        </template>
+      </ul>
+      <div class="">
+        <img src="./img/oksana-with-flower.png" alt="img">
       </div>
     </div>
   </div>
-</body>
+</section>
+        <section x-data="content" id="add" class="py-[25px] md:py-[50px] bg-text-pink rounded-[40px]">
+  <div class="container max-w-[1300px]">
+    <h2 class="text-silver text-center font-secondary uppercase text-2xl md:text-[40px]">На вас чекає:</h2>
+    <ul class="mt-6 md:mt-[50px] grid grid-cols-2 md:gap-[30px] gap-[15px]">
+      <template x-for="item in advances_content">
+        <li class="flex items-center">
+          <div class="shrink-0 max-w-full bg-white shadow-box md:p-3 p-[7px] rounded-[4px]">
+            <img class="w-5 md:w-10" :src="item.img" alt="img">
+          </div>
+          <div class="ml-[10px] text-silver text-[10px] md:text-lg" x-text="item.title"></div>
+        </li>
+      </template>
+    </ul>
+  </div>
+</section>
 
+        <section class="py-[25px] md:py-[50px]">
+  <div class="container max-w-[1200px]">
+    <h2 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">я допоможу</h2>
+    <div class="relative mt-6 md:mt-[50px] text-center text-[10px] font-bold text-text-secondary md:text-base">
+      <img src="./img/oksana-circle.png" alt="oksana">
+      <div class="absolute top-[15%] left-5 md:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+        <div>Пробудити жіночність</div>
+        <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
+      </div>
+      <div class="absolute top-[7%] left-[50%] translate-x-[-50%] md:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+        <div>Знайти стан внутрішньої тиші</div>
+        <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
+      </div>
+      <div class="absolute top-[15%] right-[-1%] md:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+        <div>Відновити звʼязок зі своїм «Я»</div>
+        <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
+      </div>
+      <div class="absolute top-[50%] left-[3%] translate-y-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+        <div>Послабити тривожність</div>
+        <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
+      </div>
+      <div class="absolute top-[50%] right-[3%] translate-y-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+        <div>Відчути свою особливість</div>
+        <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
+      </div>
+      <div class="absolute bottom-[9%] left-[50%] translate-x-[-50%] md:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+        <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
+        <div>Гармонізувати стосунки</div>
+      </div>
+      <div class="absolute md:bottom-[9%] bottom-[15%] left-[20%] translate-x-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+        <div>Позбутися душевних переживань </div>
+        <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
+      </div>
+      <div class="absolute md:bottom-[8%] bottom-[15%] right-0 translate-x-[-50%] lg:max-w-[217px] max-w-[80px] items-center justify-center flex flex-col">
+        <div>Віднайти сили рухатися далі</div>
+        <img class="w-[15px] md:w-[30px]" src="./img/circle-text.svg" alt="icon">
+      </div>
+    </div>
+  </div>
+</section>
+        <section id="price" class="py-[25px] md:py-[50px]">
+  <div class="container">
+    <h2 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">Варіанти співпраці</h2>
+    <ul class="w-full mt-6 md:mt-[50px] max-w-[770px] mx-auto grid md:grid-cols-2 grid-cols-1 gap-5 px-5 pb-4">
+      <li class="group flex flex-col p-5 rounded-[10px] bg-white shadow-box hover:bg-b-pink duration-300">
+        <div class="group-hover:text-white text-[#797979] text-xl mb-4 md:mb-8">Starndart</div>
+
+        <div class="text-center text-lg md:text-[34px] text-black-light flex justify-center whitespace-nowrap">
+          <span class="block mr-[5px] text-[#42FF00]">9000₴</span> / <p class="group-hover:text-white ml-[5px] flex items-end text-base md:text-2xl">11 000₴</p>
+        </div>
+
+        <div class="grid grid-cols-2 justify-center mb-[30px] md:mb-[60px]">
+          <div class="text-black-light  text-[10px] text-center group-hover:text-white">(при оплаті до 29.02)</div>
+          <div class="text-black-light  text-[10px] text-center group-hover:text-white"></div>
+        </div>
+        <ul class="flex-1 mb-5">
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>9 тижнів роботи над собою</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>9 модулів навчання</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Бонусний модуль на вибір</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Доступ до практичних завдань</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Роздатковий матеріал до програми</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Спілкування з іншими участниками в Telegram</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Прямі ефіри з можливістю задати питання</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Zoom - зустріч з тренером</span>
+          </li>
+          <li class="group-hover:text-white flex items-center md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Зворотній зв’язок практичних завдань</span>
+          </li>
+        </ul>
+        <div class="flex w-full justify-center">
+          <button
+            type="button" @click="$store.popup.id = 'starndart'; $store.popup.show()"
+             class="uppercase group-hover:text-black-light group-hover:bg-white duration-300 btn-primary price">
+            забронювати
+          </button>
+        </div>
+      </li>
+      <li class="group flex flex-col p-5 rounded-[10px] bg-white shadow-box hover:bg-b-pink duration-300">
+        <div class="group-hover:text-white text-[#797979] text-xl mb-4 md:mb-8">VIP</div>
+
+        <div class="text-center text-lg md:text-[34px] text-black-light flex justify-center whitespace-nowrap">
+          <span class="block mr-[5px] text-[#42FF00]">17 000₴</span> / <p class="group-hover:text-white ml-[5px] items-end flex text-base md:text-2xl">19 000₴</p>
+        </div>
+
+        <div class="grid grid-cols-2 justify-center mb-[30px] md:mb-[60px]">
+          <div class="text-black-light  text-[10px] text-center group-hover:text-white">(при оплаті до 29.02)</div>
+          <div class="text-black-light  text-[10px] text-center group-hover:text-white"></div>
+        </div>
+        <ul class="flex-1 mb-5">
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>9 тижнів роботи над собою</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>9 модулів навчання</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Бонусний модуль на вибір</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Доступ до практичних завдань</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Роздатковий матеріал до програми</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Спілкування з іншими участниками в Telegram</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Прямі ефіри з можливістю задати питання</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Zoom - зустріч з тренером</span>
+          </li>
+          <li class="group-hover:text-white flex items-center mb-[5px] md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Зворотній зв’язок практичних завдань</span>
+          </li>
+          <li class="group-hover:text-white flex items-center md:text-base text-[10px] text-black-light">
+            <img class="mr-3" src="./img/check.svg" alt="icon">
+            <span>Персональний супровід, мотивація, коуч</span>
+          </li>
+        </ul>
+        <div class="flex w-full justify-center">
+          <button
+            type="button" @click="$store.popup.id = 'vip'; $store.popup.show()"
+            class="uppercase group-hover:text-black-light group-hover:bg-white duration-300 btn-primary price">
+            забронювати
+          </button>
+        </div>
+      </li>
+    </ul>
+
+    <div class="flex justify-center">
+      <div class="py-2 md:px-10 px-6 rounded-[70px] border-[1px] border-text-pink inline-flex justify-center items-center mt-6 font-secondary text-light-blue text-center">
+        <img class="mr-3" src="./img/gift.png" alt="icon">
+        <p class="text-sm md:text-2xl font-medium text-text-pink">Бронюйте зараз та отримуйте онлайн
+          <br> консультацію зі мною в подарунок
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="bg-text-pink rounded-[40px] md:py-[69px] py-8">
+  <div class="container max-w-[1300px]">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-5 items-center">
+      <div>
+        <img src="./img/monobank.svg" alt="monobank">
+      </div>
+      <div class="text-center">
+        <p class="md:text-2xl text-base text-silver font-secondary">
+          Обирай зручний варіант співпраці, а оплату можна розбити на частини
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+        <section class="py-[25px] md:py-[50px]">
+  <div class="container max-w-[1300px]">
+    <div class="grid md:grid-cols-2 grid-cols-1 items-center md:gap-[70px] gap-3">
+      <div>
+        <h3 class="mb-5 text-[#797979] font-secondary uppercase md:text-[32px] text-lg">
+          Є питання?
+        </h3>
+        <h3 class="mb-5 text-text-pink font-secondary uppercase md:text-[36px] text-xl">
+          Напиши мені його зараз!
+        </h3>
+        <a
+          class="inline-flex items-center gap-2 py-1 pl-1 pr-3 bg-[#25A3E2] text-white rounded-[25px] hover:opacity-70 duration-300"
+          href="https://t.me/Oksanikett"
+          target="_blank">
+          <img src="./img/telegram.svg" alt="telegram">
+          <span>Перейти в Telegram</span>
+        </a>
+      </div>
+      <div>
+        <img src="./img/oksana-telegram.png" alt="oksana">
+      </div>
+    </div>
+  </div>
+</section>
+        <style>
+  .swiper-wrapper {
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: #F6F6F6;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 14px;
+    font-weight: 900;
+    color: #FF8098;
+  }
+
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 15px;
+    left: auto;
+  }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 15px;
+    right: auto;
+  }
+  @media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 18px;
+      height: 18px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 10px;
+      font-weight: 900;
+    }
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+      right: -25px;
+      left: auto;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      left: -25px;
+      right: auto;
+    }
+  }
+</style>
+
+<section x-data="content" id="gallery" class="py-[25px] md:py-[50px]">
+  <h3 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">живі відгуки</h3>
+  <div class="swiper mt-6 md:mt-[50px]" x-ref="reviews-swiper">
+    <div class="swiper-wrapper items-center">
+      <template x-for="(item, index) in reviews_content">
+        <div class="swiper-slide">
+          <img @click="idSlide = index; show(); initSwiper()" class="cursor-pointer" :src="item.img" :alt="index">
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <div x-show="openModal" x-transition.duration.500ms class="fixed inset-0 z-40 blur-overlay flex items-center justify-center">
+      <div class="swiper md:!overflow-hidden !overflow-visible relative" x-ref="reviews-swiper-modal">
+        <div class="swiper-wrapper !overflow-visible mx-auto md:max-w-[400px] max-w-[300px] items-center">
+          <template x-for="item in reviews_content">
+            <div class="swiper-slide relative">
+              <img class="" :src="item.img" alt="img">
+              <button
+                @click="hide()"
+                type="button"
+                class="absolute top-3 right-3 cursor-pointer z-40 font-black text-b-pink text-xl">
+                X
+              </button>
+            </div>
+          </template>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+  </div>
+</section>
+        <section class="py-[25px] md:py-[50px]">
+  <div class="container">
+    <h2 class="text-text-pink text-center font-secondary uppercase text-2xl md:text-[40px]">відповіді на поширені запитання</h2>
+    <ul x-data="{accordion: null}" class="max-w-[740px] mx-auto mt-6 md:mt-[50px] space-y-5">
+      <li>
+        <button
+          @click="accordion === 1 ? accordion = null : accordion = 1"
+          type="button"
+          class="flex justify-between w-full py-4 px-5 md:text-xl text-base uppercase text-black-light bg-white shadow-box rounded-[10px]">
+          Якщо не встигаю потрапити на ефір?
+          <p x-show="accordion !== 1" class="text-text-pink text-2xl">+</p>
+          <p x-show="accordion === 1" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
+        </button>
+        <div
+          x-show="accordion === 1"
+          x-collapse.duration.500ms
+          class="text-black-light md:text-xl text-base px-5">
+          урок можна переглянути в записі
+        </div>
+      </li>
+      <li>
+        <button
+          @click="accordion === 2 ? accordion = null : accordion = 2"
+          type="button"
+          class="flex justify-between w-full py-4 px-5 md:text-xl text-base uppercase text-black-light bg-white shadow-box rounded-[10px]">
+          Якщо я не хочу/не можу робити Д/З
+          <p x-show="accordion !== 2" class="text-text-pink text-2xl">+</p>
+          <p x-show="accordion === 2" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
+        </button>
+        <div
+          x-show="accordion === 2"
+          x-collapse.duration.500ms
+          class="text-black-light md:text-xl text-base px-5">
+          Д/З є абсолютно обовʼязковими для виконання. Невиконання позбавляє вас можливості бути учасницею курсу
+        </div>
+      </li>
+      <li>
+        <button
+          @click="accordion === 3 ? accordion = null : accordion = 3"
+          type="button"
+          class="flex justify-between w-full py-4 px-5 md:text-xl text-base uppercase text-black-light bg-white shadow-box rounded-[10px]">
+          Маю велике бажання, та є сумніви?
+          <p x-show="accordion !== 3" class="text-text-pink text-2xl">+</p>
+          <p x-show="accordion === 3" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
+        </button>
+        <div
+          x-show="accordion === 3"
+          x-collapse.duration.500ms
+          class="text-black-light md:text-xl text-base px-5">
+          Оберіть себе. Ви маєте бути готовими до змін
+        </div>
+      </li>
+      <li>
+        <button
+          @click="accordion === 4 ? accordion = null : accordion = 4"
+          type="button"
+          class="flex justify-between w-full py-4 px-5 md:text-xl text-base uppercase text-black-light bg-white shadow-box rounded-[10px]">
+          Маю велике бажання пройти курс, та не маю фінансів?
+          <p x-show="accordion !== 4" class="text-text-pink text-2xl">+</p>
+          <p x-show="accordion === 4" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
+        </button>
+        <div
+          x-show="accordion === 4"
+          x-collapse.duration.500ms
+          class="text-black-light md:text-xl text-base px-5">
+          У нас діє три тарифи, а також є можливість оплати частинами.
+        </div>
+      </li>
+      <li>
+        <button
+          @click="accordion === 5 ? accordion = null : accordion = 5"
+          type="button"
+          class="flex justify-between w-full py-4 px-5 md:text-xl text-base uppercase text-black-light bg-white shadow-box rounded-[10px]">
+          Як можна записатися?
+          <p x-show="accordion !== 5" class="text-text-pink text-2xl">+</p>
+          <p x-show="accordion === 5" class="text-text-pink text-3xl -mt-1 mr-1">-</p>
+        </button>
+        <div
+          x-show="accordion === 5"
+          x-collapse.duration.500ms
+          class="text-black-light md:text-xl text-base">
+          <a href="#price" class="text-black-light md:text-xl text-base underline hover:text-red-800 duration-300 px-5">
+            Ось за цим посиланням.
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+    </main>
+
+    <footer class="py-[25px] md:py-[50px] bg-text-pink rounded-t-[40px]">
+  <div class="container max-w-[1300px]">
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="justify-start">
+        <h3 class="mb-3 text-silver font-secondary uppercase text-2xl md:text-[40px]">OKSANA ROMA</h3>
+        <ul class="flex space-x-3 md:mb-[60px] mb-8">
+          <li>
+            <img src="./img/mastercard.svg" alt="mastercard">
+          </li>
+          <li>
+            <img src="./img/visa.svg" alt="visa">
+          </li>
+        </ul>
+        <div class="text-silver md:text-xl text-base">
+          <p>Контакти ФОП:</p>
+          <p>Романенко Оксана Миколаївна</p>
+          <p>ІПН(ЄДРПОУ): 3080016560</p>
+          <p>Рахунок: UA693220010000026005340002207</p>
+          <p>Банк:АКЦІОНЕРНЕ ТОВАРИСТВО "УНІВЕРСАЛ БАНК"</p>
+          <p>МФО 322001</p>
+          <p>ЄДРПОУ 21133352</p>
+        </div>
+      </div>
+
+      <div class="justify-end text-right">
+        <h4 class="mb-2 text-silver md:text-2xl text-lg font-medium">Соціальні мережі:</h4>
+        <ul class="flex justify-end gap-5 mb-2">
+          <li>
+            <a target="_blank" href="https://www.instagram.com/oksana_roma_new/">
+              <img src="./img/inst.svg" alt="inst">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.facebook.com/oksanaromacoaching">
+              <img src="./img/facebook.svg" alt="facebook">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.youtube.com/channel/UCVtfi4y8S84kNJtOtTW3VYg">
+              <img src="./img/youtube.svg" alt="youtube">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://t.me/Oksanikett">
+              <img src="./img/telegram-footer.svg" alt="telegram">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.tiktok.com/@oksanaroma1?_t=8jpPrCeJc9P&_r=1">
+              <img src="./img/tiktok.svg" alt="tiktok">
+            </a>
+          </li>
+        </ul>
+        <h4 class="mb-2 text-silver md:text-2xl text-lg font-medium">Номер телефону:</h4>
+        <a class="mb-2 text-silver md:text-2xl text-lg font-medium" href="tel:+380 96 106 10 76">+380 96 106 10 76</a>
+        <h4 class="mb-2 text-silver md:text-2xl text-lg font-medium">E-mail:</h4>
+        <a class="mb-2 block text-silver md:text-2xl text-lg font-medium" href="mailto:oksanaroma@gmail.com">oksanaroma@gmail.com</a>
+        <a class="mb-2 block text-silver md:text-2xl text-lg font-medium underline" href="./img/agreement-oksana-roma.pdf" download>
+          Публічний договір(Оферта)
+        </a>
+        <p class="text-silver md:text-2xl text-base font-medium">Oksana Roma 2024 © Всі права захищені</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <article
+        x-cloak
+        id="mobile-menu"
+        x-show="$store.mobileMenu.visible"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="translate-x-3/4"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="translate-x-3/4"
+        class="absolute top-0 right-0 flex h-full w-full z-20 touch-none flex-col items-start justify-start md:hidden bg-bg-pink"
+>
+ <div class="w-full flex justify-end p-3">
+  <button type="button" @click="$store.mobileMenu.hide()" class="text-2xl text-white-light">X</button>
+ </div>
+ <ul class="space-y-5 font-medium flex h-full flex-col justify-center items-center w-full">
+  <li><a @click="$store.mobileMenu.hide()" class="text-2xl text-white-light" href="#program">Програма</a></li>
+  <li><a @click="$store.mobileMenu.hide()" class="text-2xl text-white-light" href="#add">Переваги</a></li>
+  <li><a @click="$store.mobileMenu.hide()" class="text-2xl text-white-light" href="#price">Тарифи</a></li>
+  <li><a @click="$store.mobileMenu.hide()" class="text-2xl text-white-light" href="#gallery">Відгуки</a></li>
+ </ul>
+</article>
+    <div
+  x-show="$store.popup.visible"
+  x-transition.duration.500ms
+  id="popup"
+  class="fixed inset-0 z-40 blur-overlay">
+  <div @click.self="$store.popup.hide()" class="flex items-center justify-center px-8 py-3 min-h-screen">
+    <div class="relative flex bg-white-light rounded-[20px] max-w-[500px]">
+      <button @click="$store.popup.hide()" class="absolute top-3 right-3 font-black text-b-pink text-xl">X</button>
+      <form id="form" class="" action="#">
+        <div class="rounded-t-[20px] overflow-hidden">
+          <img class="w-full" src="./img/form-image.jpg" alt="img">
+        </div>
+        <ul class="max-w-[375px] mx-auto py-10 px-5">
+          <li class="mb-5">
+            <label for="formName" class="text-black-light text-lg mb-4 block">Ім’я*</label>
+            <input id="formName" type="text" name="name" class="submit-error-js px-3 block w-full h-8 text-base text-black-light rounded-[10px] bg-transparent border-[1px] border-light-blue _req">
+          </li>
+          <li class="mb-5">
+            <label for="formPhone" class="text-black-light text-lg mb-4 block">Номер телефону*</label>
+            <input id="formPhone" type="tel" name="phone" class="submit-error-js px-3 block w-full h-8 text-base text-black-light rounded-[10px] bg-transparent border-[1px] border-light-blue _req">
+          </li>
+          <li class="mb-5">
+            <label for="formEmail" class="text-black-light text-lg mb-4 block">Email</label>
+            <input id="formEmail" type="email" name="email" class="px-3 block w-full h-8 text-base text-black-light rounded-[10px] bg-transparent border-[1px] border-light-blue">
+          </li>
+          <li class="mb-5">
+            <div data-id="0" class="popup__price-silver hidden">
+              <label>Тариф: 7000₴ / 8000₴ (Silver)</label>
+              <input type="hidden" name="silver" class="silver">
+            </div>
+            <div x-show="$store.popup.priceGold" class="popup__price-gold">
+              <label>Тариф: 9000₴ / 11 000₴ (Starndart)</label>
+              <input type="hidden" name="gold" class="gold" :value="$store.popup.valueGold">
+            </div>
+            <div x-show="$store.popup.priceDiamond" class="popup__price-diamond">
+              <label>Тариф: 17 000₴ / 19 000₴ (VIP)</label>
+              <input type="hidden" name="diamond" class="diamond" :value="$store.popup.valueDiamond">
+            </div>
+          </li>
+          <li class="flex justify-center">
+            <button type="submit" class="btn-primary">Відправити</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
 </html>

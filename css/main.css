@@ -589,6 +589,39 @@ video {
 .top-\[7\%\]{
   top: 7%;
 }
+.left-1{
+  left: 0.25rem;
+}
+.left-2{
+  left: 0.5rem;
+}
+.left-3{
+  left: 0.75rem;
+}
+.left-4{
+  left: 1rem;
+}
+.left-5{
+  left: 1.25rem;
+}
+.right-1{
+  right: 0.25rem;
+}
+.right-\[-2\%\]{
+  right: -2%;
+}
+.right-\[-21\]{
+  right: -21;
+}
+.right-\[-1\%\]{
+  right: -1%;
+}
+.bottom-\[10\%\]{
+  bottom: 10%;
+}
+.bottom-\[9\%\]{
+  bottom: 9%;
+}
 .z-10{
   z-index: 10;
 }
@@ -1049,9 +1082,6 @@ video {
 }
 .pr-3{
   padding-right: 0.75rem;
-}
-.pt-3{
-  padding-top: 0.75rem;
 }
 .pt-\[calc\(20px\+var\(--header-height\)\)\]{
   padding-top: calc(20px + var(--header-height));
